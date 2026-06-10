@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRON FIT | パーソナルトレーニングジム</title>
+<meta name="description" content="完全個室・マンツーマン指導のパーソナルトレーニングジム。60日で結果を出す科学的プログラムで、あなたの理想の体を実現します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --black:#080808;
+  --card:#111111;
+  --card2:#181818;
+  --orange:#FF4D00;
+  --orange-light:#FF7040;
+  --white:#F0F0F0;
+  --muted:rgba(240,240,240,.45);
+  --border:rgba(255,255,255,.07);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 64px;height:68px;
+  background:rgba(8,8,8,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:1.6rem;letter-spacing:.12em;
+}
+.nav-logo em{color:var(--orange);font-style:normal}
+.nav-links{display:flex;gap:40px}
+.nav-links a{
+  font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--muted);transition:color .2s;
+}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{
+  background:var(--orange);color:var(--white);
+  padding:10px 28px;
+  font-size:.68rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;
+  transition:all .2s;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+}
+.nav-cta:hover{background:var(--orange-light);transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:120px 64px 80px;
+  position:relative;overflow:hidden;
+  background:var(--black);
+}
+.hero-grid-bg{
+  position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,77,0,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,77,0,.04) 1px,transparent 1px);
+  background-size:80px 80px;
+  pointer-events:none;
+}
+.hero-gradient{
+  position:absolute;top:0;right:0;width:55%;height:100%;
+  background:radial-gradient(ellipse 80% 80% at 80% 50%,rgba(255,77,0,.12) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-number{
+  position:absolute;right:4%;top:50%;transform:translateY(-50%);
+  font-family:'Bebas Neue',sans-serif;
+  font-size:28vw;line-height:1;letter-spacing:-.04em;
+  color:rgba(255,77,0,.06);
+  pointer-events:none;
+}
+.hero-inner{max-width:800px;position:relative;z-index:2}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid rgba(255,77,0,.4);
+  padding:7px 20px;
+  font-size:.64rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:36px;
+}
+.hero-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 1.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(4rem,10vw,10rem);
+  line-height:.88;letter-spacing:.02em;margin-bottom:12px;
+}
+.hero-title em{color:var(--orange);font-style:normal;display:block}
+.hero-sub{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(1.5rem,3vw,2.8rem);
+  letter-spacing:.06em;color:var(--muted);margin-bottom:36px;
+}
+.hero-body{
+  font-size:.98rem;color:rgba(240,240,240,.6);
+  line-height:1.9;margin-bottom:52px;max-width:520px;
+}
+.hero-body strong{color:var(--white)}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:72px}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--orange);color:var(--white);
+  padding:18px 44px;
+  font-size:.82rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;
+  clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
+  transition:all .25s;
+}
+.btn-primary:hover{background:var(--orange-light);transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,77,0,.4)}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1.5px solid rgba(240,240,240,.2);color:var(--white);
+  padding:16px 40px;
+  font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  transition:all .25s;
+}
+.btn-ghost:hover{border-color:var(--orange);color:var(--orange)}
+.hero-stats{display:flex;gap:48px}
+.stat-item .n{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:3rem;line-height:1;color:var(--white);margin-bottom:4px;letter-spacing:.02em;
+}
+.stat-item .n em{color:var(--orange);font-style:normal}
+.stat-item .l{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* SECTION BASE */
+section{padding:120px 64px}
+.sec-label{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:.62rem;font-weight:900;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:16px;
+}
+.sec-label::before{content:'';width:28px;height:2px;background:var(--orange)}
+.sec-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(2.8rem,6vw,6rem);line-height:.9;letter-spacing:.02em;margin-bottom:20px;
+}
+.sec-title em{color:var(--orange);font-style:normal}
+.sec-body{font-size:.92rem;color:rgba(240,240,240,.55);line-height:1.9;max-width:540px}
+.sec-body strong{color:var(--white)}
+
+/* RESULTS (stats strip) */
+.results{
+  background:var(--orange);padding:48px 64px;
+}
+.results-inner{
+  max-width:1200px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:2px;background:rgba(255,255,255,.15);
+}
+.result-item{
+  background:var(--orange);
+  padding:36px 32px;text-align:center;
+}
+.result-n{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:3.5rem;line-height:1;color:var(--white);letter-spacing:.02em;
+}
+.result-n em{font-style:normal;font-size:2rem}
+.result-l{font-size:.7rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:6px}
+
+/* FEATURES */
+.features{background:var(--card)}
+.features-inner{max-width:1200px;margin:0 auto}
+.features-header{margin-bottom:80px}
+.features-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.04)}
+.feature-item{
+  background:var(--card);padding:56px 48px;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.feature-item:hover{background:var(--card2)}
+.feature-num{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:6rem;line-height:1;
+  color:rgba(255,77,0,.07);
+  position:absolute;top:20px;right:24px;letter-spacing:-.02em;
+}
+.feature-icon{font-size:2.8rem;margin-bottom:24px}
+.feature-name{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2rem;letter-spacing:.06em;margin-bottom:12px;color:var(--white);
+}
+.feature-name em{color:var(--orange);font-style:normal}
+.feature-desc{font-size:.85rem;color:var(--muted);line-height:1.9}
+.feature-tag{
+  display:inline-block;margin-top:20px;
+  background:rgba(255,77,0,.12);border:1px solid rgba(255,77,0,.25);
+  padding:5px 16px;
+  font-size:.62rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);
+}
+
+/* TRAINER */
+.trainer-section{background:var(--black)}
+.trainer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center}
+.trainer-card{
+  background:var(--card);
+  padding:0;overflow:hidden;
+  border:1px solid var(--border);
+  position:relative;
+}
+.trainer-img{
+  aspect-ratio:3/4;
+  background:linear-gradient(145deg,#1a0800 0%,#2a1008 50%,rgba(255,77,0,.1) 100%);
+  display:flex;align-items:center;justify-content:center;
+  font-size:8rem;
+  position:relative;
+}
+.trainer-img::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:60%;
+  background:linear-gradient(transparent,rgba(0,0,0,.8));
+}
+.trainer-name-overlay{
+  position:absolute;bottom:24px;left:24px;z-index:2;
+  font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.06em;
+}
+.trainer-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:var(--orange);padding:4px 12px;
+  font-size:.58rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--white);
+  margin-bottom:6px;
+}
+.trainer-info{padding:28px}
+.trainer-spec{display:flex;flex-direction:column;gap:10px}
+.trainer-spec-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:.8rem;color:var(--muted);padding:8px 0;
+  border-bottom:1px solid var(--border);
+}
+.trainer-spec-item:last-child{border-bottom:none}
+.trainer-spec-item em{color:var(--white);font-style:normal;font-size:.78rem;font-weight:700}
+.trainer-content{}
+.trainer-licenses{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0}
+.trainer-license{
+  padding:6px 14px;border:1px solid rgba(255,77,0,.3);
+  font-size:.65rem;font-weight:700;letter-spacing:.1em;color:var(--orange);
+}
+.trainer-message{
+  font-size:.88rem;color:rgba(240,240,240,.6);line-height:2.1;
+  border-left:2px solid var(--orange);padding-left:20px;margin-top:24px;
+}
+
+/* PROGRAM */
+.program-section{background:var(--card)}
+.program-inner{max-width:1000px;margin:0 auto}
+.program-header{margin-bottom:72px}
+.program-timeline{display:flex;flex-direction:column;gap:0}
+.prog-step{
+  display:grid;grid-template-columns:120px 1fr;gap:48px;align-items:flex-start;
+  padding:44px 0;border-bottom:1px solid var(--border);
+}
+.prog-step:last-child{border-bottom:none}
+.prog-week{
+  font-family:'Bebas Neue',sans-serif;
+  text-align:center;
+}
+.prog-week .w{font-size:3rem;line-height:1;color:var(--orange)}
+.prog-week .wl{font-size:.6rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
+.prog-content{}
+.prog-name{font-size:1.1rem;font-weight:900;color:var(--white);margin-bottom:8px}
+.prog-desc{font-size:.84rem;color:var(--muted);line-height:1.9}
+.prog-tag{
+  display:inline-block;margin-top:12px;
+  background:rgba(255,77,0,.1);border:1px solid rgba(255,77,0,.2);
+  padding:4px 14px;
+  font-size:.6rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);
+}
+
+/* PRICING */
+.pricing-section{background:var(--black)}
+.pricing-inner{max-width:1000px;margin:0 auto}
+.pricing-header{text-align:center;margin-bottom:72px}
+.trial-banner{
+  background:var(--orange);
+  padding:48px 56px;margin-bottom:32px;
+  display:flex;align-items:center;justify-content:space-between;gap:40px;
+  clip-path:polygon(0 0,100% 0,100% calc(100% - 20px),calc(100% - 20px) 100%,0 100%);
+}
+.trial-text{}
+.trial-label{
+  font-size:.62rem;font-weight:900;letter-spacing:.25em;text-transform:uppercase;
+  color:rgba(255,255,255,.7);margin-bottom:8px;
+}
+.trial-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:2.2rem;letter-spacing:.04em;color:var(--white);margin-bottom:8px;
+}
+.trial-body{font-size:.85rem;color:rgba(255,255,255,.75);line-height:1.8}
+.trial-price{text-align:right;flex-shrink:0}
+.trial-price .old{
+  font-size:.78rem;color:rgba(255,255,255,.6);
+  text-decoration:line-through;margin-bottom:4px;
+}
+.trial-price .new{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:3.5rem;letter-spacing:.02em;color:var(--white);line-height:1;
+}
+.trial-price .new em{font-style:normal;font-size:1.4rem}
+.trial-btn{
+  display:inline-block;
+  background:var(--white);color:var(--orange);
+  padding:14px 36px;margin-top:16px;
+  font-size:.72rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;
+  transition:all .2s;
+}
+.trial-btn:hover{background:var(--black);color:var(--white)}
+.plans-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:rgba(255,255,255,.04)}
+.plan-card{
+  background:var(--card);padding:48px 40px;
+  position:relative;transition:background .3s;
+}
+.plan-card:hover{background:var(--card2)}
+.plan-card.hot{background:var(--card2);border:1px solid rgba(255,77,0,.3)}
+.plan-badge{
+  display:inline-block;
+  background:var(--orange);color:var(--white);
+  padding:3px 14px;margin-bottom:20px;
+  font-size:.58rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;
+}
+.plan-name{
+  font-family:'Bebas Neue',sans-serif;font-size:1.8rem;letter-spacing:.08em;
+  color:var(--white);margin-bottom:8px;
+}
+.plan-amount{
+  font-family:'Bebas Neue',sans-serif;font-size:3.5rem;line-height:1;
+  color:var(--orange);letter-spacing:.02em;margin-bottom:4px;
+}
+.plan-period{font-size:.72rem;color:var(--muted);margin-bottom:28px;font-weight:700}
+.plan-items{list-style:none;margin-bottom:36px}
+.plan-items li{
+  font-size:.82rem;color:rgba(240,240,240,.65);
+  padding:10px 0;border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+}
+.plan-items li::before{content:'—';color:var(--orange);font-weight:900;flex-shrink:0}
+.plan-btn{
+  display:block;text-align:center;
+  background:var(--orange);color:var(--white);
+  padding:14px;
+  font-size:.72rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;
+  transition:all .2s;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+}
+.plan-btn:hover{background:var(--orange-light)}
+.plan-note{text-align:center;margin-top:36px;font-size:.76rem;color:var(--muted);line-height:1.9}
+
+/* VOICE */
+.voice-section{background:var(--card)}
+.voice-inner{max-width:1200px;margin:0 auto}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:72px}
+.voice-card{
+  background:var(--black);padding:40px 36px;
+  border:1px solid var(--border);
+  position:relative;transition:border-color .3s;
+}
+.voice-card:hover{border-color:rgba(255,77,0,.3)}
+.voice-quote{font-size:3rem;color:var(--orange);line-height:1;margin-bottom:16px;font-family:serif}
+.voice-text{font-size:.86rem;color:rgba(240,240,240,.65);line-height:2;margin-bottom:28px}
+.voice-meta{display:flex;align-items:center;gap:14px;border-top:1px solid var(--border);padding-top:20px}
+.voice-avatar{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--orange);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;flex-shrink:0;
+}
+.voice-name{font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:2px}
+.voice-detail{font-size:.68rem;color:var(--muted);letter-spacing:.05em}
+.voice-result{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,77,0,.1);border:1px solid rgba(255,77,0,.2);
+  padding:4px 12px;margin-bottom:16px;
+  font-size:.65rem;font-weight:900;letter-spacing:.12em;color:var(--orange);
+}
+
+/* CTA FINAL */
+.cta-section{
+  padding:160px 64px;text-align:center;
+  background:
+    radial-gradient(ellipse 80% 80% at 50% 50%,rgba(255,77,0,.15) 0%,transparent 70%),
+    var(--black);
+  position:relative;overflow:hidden;
+}
+.cta-section::before{
+  content:'START';
+  position:absolute;font-family:'Bebas Neue',sans-serif;
+  font-size:22vw;letter-spacing:-.04em;
+  color:rgba(255,77,0,.04);
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.cta-inner{position:relative;z-index:2}
+.cta-title{
+  font-family:'Bebas Neue',sans-serif;
+  font-size:clamp(3rem,7vw,8rem);
+  line-height:.9;margin-bottom:24px;
+}
+.cta-title em{color:var(--orange);font-style:normal;display:block}
+.cta-body{font-size:1rem;color:var(--muted);line-height:1.9;max-width:500px;margin:0 auto 56px}
+.cta-body strong{color:var(--white)}
+.cta-btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:28px;font-size:.72rem;color:rgba(240,240,240,.25);letter-spacing:.08em}
+
+/* FOOTER */
+footer{
+  background:#040404;border-top:1px solid var(--border);
+  padding:48px 64px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:.1em}
+.footer-logo em{color:var(--orange);font-style:normal}
+.footer-links{display:flex;gap:32px}
+.footer-links a{font-size:.7rem;color:var(--muted);font-weight:600;letter-spacing:.1em;transition:color .2s}
+.footer-links a:hover{color:var(--white)}
+.footer-copy{font-size:.65rem;color:rgba(240,240,240,.18)}
+
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  section{padding:80px 20px}
+  .hero{padding:100px 20px 60px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  .results-inner{grid-template-columns:repeat(2,1fr)}
+  .features-grid{grid-template-columns:1fr}
+  .trainer-inner{grid-template-columns:1fr}
+  .prog-step{grid-template-columns:80px 1fr;gap:24px}
+  .plans-grid{grid-template-columns:1fr}
+  .voice-grid{grid-template-columns:1fr}
+  .trial-banner{flex-direction:column;gap:24px;align-items:flex-start}
+  .cta-section{padding:100px 20px}
+  footer{padding:40px 20px;flex-direction:column;gap:24px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">IRON <em>FIT</em></span>
+  <div class="nav-links">
+    <a href="#features">特徴</a>
+    <a href="#trainer">トレーナー</a>
+    <a href="#program">プログラム</a>
+    <a href="#pricing">料金</a>
+    <a href="#voice">お客様の声</a>
+  </div>
+  <a href="#pricing" class="nav-cta">無料体験予約 →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-gradient"></div>
+  <div class="hero-number">60</div>
+  <div class="hero-inner">
+    <span class="hero-tag">完全個室 パーソナルトレーニング</span>
+    <h1 class="hero-title">
+      60日で、<em>変わる。</em>
+    </h1>
+    <p class="hero-sub">Science-Based Personal Training</p>
+    <p class="hero-body">
+      マンツーマン指導と科学的な栄養管理で、<strong>60日間で確実に結果を出す</strong>パーソナルトレーニングジム。<br>
+      完全個室だから、はじめての方でも安心してスタートできます。
+    </p>
+    <div class="hero-btns">
+      <a href="#pricing" class="btn-primary">無料体験を予約する →</a>
+      <a href="#features" class="btn-ghost">詳しく見る</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <p class="n">-8.3<em>kg</em></p>
+        <p class="l">平均脂肪減少量（60日）</p>
+      </div>
+      <div class="stat-item">
+        <p class="n">98<em>%</em></p>
+        <p class="l">顧客満足度</p>
+      </div>
+      <div class="stat-item">
+        <p class="n">300<em>+</em></p>
+        <p class="l">指導実績</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS STRIP -->
+<div class="results">
+  <div class="results-inner">
+    <div class="result-item">
+      <p class="result-n">60<em>日</em></p>
+      <p class="result-l">集中プログラム期間</p>
+    </div>
+    <div class="result-item">
+      <p class="result-n">-8.3<em>kg</em></p>
+      <p class="result-l">平均脂肪減少量</p>
+    </div>
+    <div class="result-item">
+      <p class="result-n">98<em>%</em></p>
+      <p class="result-l">顧客満足度</p>
+    </div>
+    <div class="result-item">
+      <p class="result-n">300<em>+</em></p>
+      <p class="result-l">指導実績（累計）</p>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="features-inner">
+    <div class="features-header">
+      <p class="sec-label">Our Features</p>
+      <h2 class="sec-title">IRON FITが<em>選ばれる</em>理由</h2>
+      <p class="sec-body">ただのトレーニング指導ではなく、<strong>結果を保証する仕組み</strong>が揃っています。</p>
+    </div>
+    <div class="features-grid">
+
+      <div class="feature-item">
+        <span class="feature-num">01</span>
+        <div class="feature-icon">🔒</div>
+        <p class="feature-name">完全<em>個室</em></p>
+        <p class="feature-desc">他のお客様と顔を合わせない、完全プライベート空間。人目が気になる方、ジム未経験の方でも安心してトレーニングに集中できます。</p>
+        <span class="feature-tag">完全プライベート</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-num">02</span>
+        <div class="feature-icon">🎯</div>
+        <p class="feature-name">マンツーマン<em>指導</em></p>
+        <p class="feature-desc">資格を持つ専属トレーナーが全セッションに付き添います。フォームチェック・負荷調整・モチベーション管理まで、一人ひとりに完全集中。</p>
+        <span class="feature-tag">専属トレーナー制</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-num">03</span>
+        <div class="feature-icon">🥦</div>
+        <p class="feature-name">栄養<em>管理サポート</em></p>
+        <p class="feature-desc">トレーニングだけでは結果は出ません。専任の栄養士と連携した食事指導・レシピ提供で、生活習慣から根本的に変えます。</p>
+        <span class="feature-tag">栄養士連携</span>
+      </div>
+
+      <div class="feature-item">
+        <span class="feature-num">04</span>
+        <div class="feature-icon">🏆</div>
+        <p class="feature-name">60日<em>結果保証</em></p>
+        <p class="feature-desc">60日間のプログラム修了時に目標数値に達しなかった場合、追加セッションを無料提供。「やったのに変わらなかった」をなくします。</p>
+        <span class="feature-tag">結果保証付き</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section class="trainer-section" id="trainer">
+  <div class="trainer-inner">
+    <div class="trainer-card">
+      <div class="trainer-img">
+        💪
+        <div class="trainer-name-overlay">
+          <span class="trainer-badge">Head Trainer</span><br>
+          田中 拓海
+        </div>
+      </div>
+      <div class="trainer-info">
+        <div class="trainer-spec">
+          <div class="trainer-spec-item">経験年数 <em>10年以上</em></div>
+          <div class="trainer-spec-item">担当実績 <em>300名以上</em></div>
+          <div class="trainer-spec-item">専門 <em>ダイエット・筋肥大</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="trainer-content">
+      <p class="sec-label">Our Trainer</p>
+      <h2 class="sec-title">本物の<em>プロが</em><br>担当します。</h2>
+      <div class="trainer-licenses">
+        <span class="trainer-license">NSCA-CPT</span>
+        <span class="trainer-license">JATI-ATI</span>
+        <span class="trainer-license">栄養士資格</span>
+        <span class="trainer-license">応急救護資格</span>
+      </div>
+      <p class="sec-body">
+        10年以上・300名超の指導実績。ダイエット・筋肥大・健康維持・ボディメイクなど、<strong>目的に応じたプログラムを一から設計</strong>します。<br><br>
+        「忙しいけど結果を出したい」「過去に挫折した」「何から始めればいいか分からない」——そんな方こそ、ぜひ一度ご相談ください。
+      </p>
+      <blockquote class="trainer-message">
+        「筋肉はうそをつかない。正しいトレーニングと食事を続ければ、必ず体は応えます。その伴走役として、全力でサポートします。」
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section class="program-section" id="program">
+  <div class="program-inner">
+    <div class="program-header">
+      <p class="sec-label">Program Flow</p>
+      <h2 class="sec-title">60日間<em>プログラムの</em>流れ</h2>
+    </div>
+    <div class="program-timeline">
+      <div class="prog-step">
+        <div class="prog-week">
+          <p class="w">0</p>
+          <p class="wl">Day</p>
+        </div>
+        <div class="prog-content">
+          <p class="prog-name">無料カウンセリング・体組成測定</p>
+          <p class="prog-desc">現在の体組成・生活習慣・目標をヒアリング。60日後のゴール設定とプログラム設計を行います。費用なし・購入不要。</p>
+          <span class="prog-tag">無料・約60分</span>
+        </div>
+      </div>
+      <div class="prog-step">
+        <div class="prog-week">
+          <p class="w">1-2</p>
+          <p class="wl">Week</p>
+        </div>
+        <div class="prog-content">
+          <p class="prog-name">基礎固め期：フォーム習得＋食事記録スタート</p>
+          <p class="prog-desc">正しいフォームの習得と、代謝を上げるための基礎プログラム。食事記録アプリで現状の食生活を可視化します。</p>
+          <span class="prog-tag">週2回セッション</span>
+        </div>
+      </div>
+      <div class="prog-step">
+        <div class="prog-week">
+          <p class="w">3-6</p>
+          <p class="wl">Week</p>
+        </div>
+        <div class="prog-content">
+          <p class="prog-name">変化期：負荷増加＋栄養指導強化</p>
+          <p class="prog-desc">慣れてきた体に適切な刺激を与え、代謝を最大化。栄養士と連携した個別食事プランで、体組成の変化が加速します。</p>
+          <span class="prog-tag">週2〜3回セッション</span>
+        </div>
+      </div>
+      <div class="prog-step">
+        <div class="prog-week">
+          <p class="w">7-8</p>
+          <p class="wl">Week</p>
+        </div>
+        <div class="prog-content">
+          <p class="prog-name">仕上げ期：最終調整＋習慣化サポート</p>
+          <p class="prog-desc">60日後のゴールに向けた最終仕上げ。プログラム終了後も継続できる「一人でできる習慣」を身につけて卒業します。</p>
+          <span class="prog-tag">結果保証測定あり</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <p class="sec-label" style="justify-content:center">Pricing</p>
+      <h2 class="sec-title" style="text-align:center">料金<em>プラン</em></h2>
+    </div>
+
+    <div class="trial-banner">
+      <div class="trial-text">
+        <p class="trial-label">First Step / まず試してみる</p>
+        <p class="trial-title">無料カウンセリング＋<br>体験セッション</p>
+        <p class="trial-body">約90分。体組成測定・ヒアリング・実際のトレーニングを体験。購入・契約は一切不要です。</p>
+      </div>
+      <div class="trial-price">
+        <p class="old">通常 ¥5,000</p>
+        <p class="new">¥0<em>（無料）</em></p>
+        <a href="#" class="trial-btn">無料体験を予約する →</a>
+      </div>
+    </div>
+
+    <div class="plans-grid">
+      <div class="plan-card">
+        <p class="plan-name">60日 集中コース</p>
+        <p class="plan-amount">¥148,000</p>
+        <p class="plan-period">〜（税込） / 2ヶ月</p>
+        <ul class="plan-items">
+          <li>週2回 × 8週間（計16回）</li>
+          <li>専属トレーナー担当制</li>
+          <li>食事管理サポート（アプリ連携）</li>
+          <li>栄養士との個別相談1回</li>
+          <li>60日結果保証付き</li>
+          <li>体組成測定（毎月）</li>
+        </ul>
+        <a href="#" class="plan-btn">このプランで申し込む</a>
+      </div>
+      <div class="plan-card hot">
+        <span class="plan-badge">Most Popular</span>
+        <p class="plan-name">60日 徹底コース</p>
+        <p class="plan-amount">¥198,000</p>
+        <p class="plan-period">〜（税込） / 2ヶ月</p>
+        <ul class="plan-items">
+          <li>週3回 × 8週間（計24回）</li>
+          <li>専属トレーナー担当制</li>
+          <li>食事管理サポート（アプリ連携）</li>
+          <li>栄養士との個別相談3回</li>
+          <li>60日結果保証付き</li>
+          <li>体組成測定（毎月）</li>
+          <li>LINEサポート無制限</li>
+          <li>プログラム終了後フォロー1ヶ月</li>
+        </ul>
+        <a href="#" class="plan-btn">このプランで申し込む</a>
+      </div>
+    </div>
+    <p class="plan-note">
+      ※ 分割払い対応（最大12回）。まずは無料体験セッションからご参加ください。<br>
+      ※ 60日結果保証：目標未達の場合、追加セッションを無料提供します。
+    </p>
+  </div>
+</section>
+
+<!-- VOICE -->
+<section class="voice-section" id="voice">
+  <div class="voice-inner">
+    <p class="sec-label">Customer Voice</p>
+    <h2 class="sec-title">お客様の<em>声</em></h2>
+    <div class="voice-grid">
+
+      <div class="voice-card">
+        <span class="voice-result">▼ -9.2kg / 60日</span>
+        <p class="voice-quote">"</p>
+        <p class="voice-text">ダイエット歴10年、何度挑戦しても続かなかった私が、60日で9.2kg減。食事制限だけではなく、正しい食べ方を教えてもらえたのが大きかったです。</p>
+        <div class="voice-meta">
+          <div class="voice-avatar">👩</div>
+          <div>
+            <p class="voice-name">Y.M さん</p>
+            <p class="voice-detail">35歳・女性・会社員</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-card">
+        <span class="voice-result">▼ -7.8kg ＋筋力向上</span>
+        <p class="voice-quote">"</p>
+        <p class="voice-text">仕事が忙しく、週2回しか通えなかったけれど、それでもしっかり結果が出ました。トレーナーさんが毎回進捗を確認してくれるので、さぼれないし、楽しい（笑）</p>
+        <div class="voice-meta">
+          <div class="voice-avatar">👨</div>
+          <div>
+            <p class="voice-name">K.T さん</p>
+            <p class="voice-detail">42歳・男性・管理職</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-card">
+        <span class="voice-result">▼ -6.1kg / 姿勢改善</span>
+        <p class="voice-quote">"</p>
+        <p class="voice-text">完全個室なのが決め手でした。ジムに行ったことがなく不安でしたが、最初から最後まで丁寧に教えてもらえて、今では自分でもジムに行けるようになりました。</p>
+        <div class="voice-meta">
+          <div class="voice-avatar">👩</div>
+          <div>
+            <p class="voice-name">A.S さん</p>
+            <p class="voice-detail">29歳・女性・フリーランス</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="sec-label" style="justify-content:center">Start Now</p>
+    <h2 class="cta-title">
+      今日が、<em>最速の<br>スタート。</em>
+    </h2>
+    <p class="cta-body">
+      無料体験セッションは費用なし・購入不要。<br>
+      <strong>まず60分、体験してから決めてください。</strong>
+    </p>
+    <div class="cta-btns">
+      <a href="#" class="btn-primary" style="font-size:.88rem;padding:20px 56px">無料体験セッションを予約する →</a>
+      <a href="tel:000-0000-0000" class="btn-ghost" style="padding:18px 40px">電話で予約する</a>
+    </div>
+    <p class="cta-note">※ 完全予約制 ／ キャンセル前日まで無料</p>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">IRON <em>FIT</em></span>
+  <div class="footer-links">
+    <a href="#features">特徴</a>
+    <a href="#trainer">トレーナー</a>
+    <a href="#program">プログラム</a>
+    <a href="#pricing">料金</a>
+    <a href="#voice">お客様の声</a>
+  </div>
+  <p class="footer-copy">© 2026 IRON FIT. All Rights Reserved.</p>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }, i * 80);
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.05});
+document.querySelectorAll('.feature-item,.result-item,.voice-card,.prog-step,.plan-card,.trainer-card').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(24px)';
+  el.style.transition = 'opacity .6s ease, transform .6s ease';
+  io.observe(el);
+});
+</script>
+</body>
+</html>
