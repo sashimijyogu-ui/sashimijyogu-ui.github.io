@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>imua｜嘉手納のトータルビューティー＆シェアサロン｜ヘア・ネイル・フェイシャル・ファスティング</title>
+  <meta name="description" content="沖縄県嘉手納のimua（イムア）。ヘア・ネイル・フェイシャル・ボディケア・ファスティングを1カ所で。English OK。完全予約制。LINE or DM で予約。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory:    #f7f2ea;
+      --cream:    #fdf8f2;
+      --sage:     #6b8c6e;
+      --sage-lt:  #e8f0e8;
+      --terra:    #b5694a;
+      --terra-lt: #f5e8e0;
+      --gold:     #b8924a;
+      --dark:     #2c2318;
+      --text:     #3a2e24;
+      --sub:      #8a7a68;
+      --white:    #ffffff;
+      --radius:   14px;
+      --shadow:   0 4px 28px rgba(44,35,24,.1);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      line-height: 1.8;
+    }
+
+    /* ── デモバナー ── */
+    .demo-banner {
+      background: var(--dark);
+      color: #c8b090;
+      text-align: center;
+      padding: 9px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+    }
+
+    /* ── ヘッダー ── */
+    header {
+      background: var(--cream);
+      padding: 14px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(107,140,110,.2);
+      box-shadow: 0 2px 16px rgba(44,35,24,.06);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: .12em;
+      line-height: 1;
+    }
+    .logo span {
+      display: block;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: .55rem;
+      font-weight: 300;
+      color: var(--sub);
+      letter-spacing: .2em;
+      margin-top: 3px;
+    }
+    .header-actions { display: flex; gap: 8px; align-items: center; }
+    .hdr-en {
+      font-size: .6rem;
+      font-weight: 700;
+      color: var(--sage);
+      border: 1px solid var(--sage);
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: .05em;
+    }
+    .hdr-reserve {
+      background: var(--sage);
+      color: var(--white);
+      font-size: .76rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+
+    /* ── ヒーロー ── */
+    .hero {
+      background: linear-gradient(165deg, var(--ivory) 0%, #ede6d8 55%, #e8ddc8 100%);
+      padding: 52px 24px 56px;
+      position: relative;
+      overflow: hidden;
+    }
+    /* 装飾ライン */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 200px; height: 200px;
+      border-bottom-left-radius: 100%;
+      background: rgba(107,140,110,.08);
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: -40px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(181,105,74,.06);
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      color: var(--sage);
+      margin-bottom: 20px;
+    }
+    .hero-label::before,
+    .hero-label::after {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 1px;
+      background: var(--sage);
+    }
+
+    .hero-en {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: var(--dark);
+      line-height: 1.15;
+      letter-spacing: .04em;
+      margin-bottom: 8px;
+    }
+    .hero-en em {
+      color: var(--terra);
+      font-style: italic;
+    }
+    .hero-ja {
+      font-size: .95rem;
+      font-weight: 900;
+      color: var(--dark);
+      letter-spacing: .05em;
+      margin-bottom: 18px;
+    }
+    .hero-copy {
+      font-size: .88rem;
+      color: var(--sub);
+      margin-bottom: 10px;
+      line-height: 1.9;
+    }
+    .hero-en-badge {
+      display: inline-block;
+      background: var(--dark);
+      color: var(--cream);
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 4px 14px;
+      border-radius: 4px;
+      letter-spacing: .1em;
+      margin-bottom: 28px;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 34px;
+    }
+    .chip {
+      background: rgba(255,255,255,.75);
+      border: 1px solid rgba(107,140,110,.3);
+      color: var(--sage);
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-btns { display: flex; flex-direction: column; gap: 10px; max-width: 300px; }
+    .btn-main {
+      display: block;
+      background: var(--sage);
+      color: var(--white);
+      font-size: .95rem;
+      font-weight: 900;
+      padding: 16px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .1em;
+      box-shadow: 0 6px 20px rgba(107,140,110,.35);
+    }
+    .btn-sub {
+      display: block;
+      background: transparent;
+      border: 1.5px solid var(--dark);
+      color: var(--dark);
+      font-size: .88rem;
+      font-weight: 700;
+      padding: 13px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .08em;
+    }
+
+    /* ── コンセプト帯 ── */
+    .concept-strip {
+      background: var(--dark);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .concept-strip p {
+      color: rgba(255,255,255,.5);
+      font-size: .65rem;
+      letter-spacing: .25em;
+      margin-bottom: 8px;
+      font-weight: 300;
+    }
+    .concept-strip h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      line-height: 1.5;
+    }
+    .concept-strip h2 span { color: #c8b090; }
+
+    /* ── セクション共通 ── */
+    section { padding: 50px 22px; }
+    section.ivory { background: var(--ivory); }
+    section.white { background: var(--white); }
+
+    .sec-eyebrow {
+      text-align: center;
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .25em;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+    .sec-title {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: .06em;
+      margin-bottom: 8px;
+    }
+    .sec-rule {
+      width: 32px; height: 1px;
+      background: var(--gold);
+      margin: 0 auto 28px;
+    }
+    .sec-sub {
+      text-align: center;
+      font-size: .78rem;
+      color: var(--sub);
+      margin-top: -20px;
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    /* ── 特徴カード ── */
+    .feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .feat-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 18px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .feat-icon { font-size: 2rem; margin-bottom: 10px; }
+    .feat-title {
+      font-size: .85rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .feat-desc { font-size: .72rem; color: var(--sub); line-height: 1.65; }
+
+    /* ── サービスリスト ── */
+    .srv-list { display: flex; flex-direction: column; gap: 12px; }
+    .srv-row {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: var(--shadow);
+      border-left: 3px solid var(--sage);
+    }
+    .srv-row.terra { border-left-color: var(--terra); }
+    .srv-row.gold  { border-left-color: var(--gold); }
+    .srv-icon-lg { font-size: 1.8rem; flex-shrink: 0; margin-top: 2px; }
+    .srv-body h3 {
+      font-size: .95rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .srv-body p {
+      font-size: .76rem;
+      color: var(--sub);
+      line-height: 1.65;
+      margin-bottom: 8px;
+    }
+    .srv-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+    .srv-tag {
+      font-size: .64rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 50px;
+      background: var(--sage-lt);
+      color: var(--sage);
+    }
+    .srv-tag.t { background: var(--terra-lt); color: var(--terra); }
+    .srv-tag.g { background: #f5f0e2; color: var(--gold); }
+
+    /* ── 料金 ── */
+    .price-list { display: flex; flex-direction: column; gap: 12px; }
+    .price-item {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .pi-left { flex: 1; }
+    .pi-tag {
+      display: inline-block;
+      font-size: .62rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 4px;
+      background: var(--sage-lt);
+      color: var(--sage);
+      margin-bottom: 6px;
+      letter-spacing: .06em;
+    }
+    .pi-tag.t { background: var(--terra-lt); color: var(--terra); }
+    .pi-name {
+      font-size: .9rem;
+      font-weight: 800;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .pi-desc { font-size: .73rem; color: var(--sub); line-height: 1.55; }
+    .pi-price {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .pi-price .regular {
+      font-size: .7rem;
+      color: #bbb;
+      text-decoration: line-through;
+      display: block;
+    }
+    .pi-price .now {
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: var(--sage);
+    }
+    .pi-price .unit { font-size: .65rem; color: var(--sub); }
+
+    .price-note {
+      background: var(--sage-lt);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: .76rem;
+      color: var(--sage);
+      line-height: 1.7;
+    }
+
+    /* ── Instagram ── */
+    .insta-wrap {
+      background: var(--ivory);
+    }
+    .insta-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow);
+    }
+    .insta-avt {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #d4c4a8, #8a9e7a, #6b8c6e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+    .avt-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: .06em;
+      text-align: center;
+    }
+    .insta-meta h3 {
+      font-size: .88rem;
+      font-weight: 900;
+      color: var(--dark);
+    }
+    .insta-meta p { font-size: .72rem; color: var(--sub); line-height: 1.5; }
+    .insta-stats {
+      font-size: .68rem;
+      color: var(--terra);
+      font-weight: 700;
+      margin-top: 3px;
+    }
+
+    /* ハイライト */
+    .highlights {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .hl-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .hl-ring {
+      width: 66px; height: 66px;
+      border-radius: 50%;
+      padding: 3px;
+      border: 2px solid var(--gold);
+    }
+    .hl-circle {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+    }
+    .hl1 { background: linear-gradient(135deg, #e8ddc8, #c8b890); }
+    .hl2 { background: linear-gradient(135deg, #d4e8d4, #8ab08a); }
+    .hl3 { background: linear-gradient(135deg, #f0e0d4, #d4a080); }
+    .hl4 { background: linear-gradient(135deg, #e0d8f0, #a890d0); }
+    .hl5 { background: linear-gradient(135deg, #f0e8d0, #c8a860); }
+    .hl6 { background: linear-gradient(135deg, #d8e8e0, #88b898); }
+    .hl-label {
+      font-size: .58rem;
+      color: var(--sub);
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+
+    /* グリッド */
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+    .ig-cell {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    /* imuaの投稿はナチュラル・ウェルネス系 */
+    .ic1 { background: linear-gradient(135deg, #d8e4d0, #b0c8a8, #8aab80); }
+    .ic2 { background: linear-gradient(135deg, #e8dcc8, #d0c0a0, #b8a080); }
+    .ic3 { background: linear-gradient(135deg, #f0e8e0, #e0ccc0, #c8b0a0); }
+    .ic4 { background: linear-gradient(135deg, #e4d8cc, #c8b8a8, #a89888); }
+    .ic5 { background: linear-gradient(135deg, #d4e0d8, #b4c8bc, #94b09c); }
+    .ic6 { background: linear-gradient(135deg, #ece4d4, #d4c8b0, #bcac90); }
+    .ic7 { background: linear-gradient(135deg, #f4ece0, #e4d4c0, #d0bca0); }
+    .ic8 { background: linear-gradient(135deg, #d8d0c4, #c0b8a8, #a8a090); }
+    .ic9 { background: linear-gradient(135deg, #e0dcd4, #ccc8bc, #b8b4a8); }
+
+    .ig-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      text-align: center;
+      width: 100%;
+    }
+    .ig-emoji { font-size: 1.4rem; margin-bottom: 4px; }
+    .ig-cap   { font-size: .52rem; font-weight: 700; color: rgba(44,35,24,.65); line-height: 1.4; }
+
+    .btn-insta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #f09040, #e04060, #7040b0);
+      color: var(--white);
+      font-size: .85rem;
+      font-weight: 900;
+      padding: 14px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: .05em;
+    }
+
+    /* ── 口コミ ── */
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 20px 20px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .rev-hd { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .rev-av {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+      background: var(--ivory);
+    }
+    .rev-nm { font-size: .82rem; font-weight: 900; color: var(--dark); }
+    .rev-st { color: #c8a050; font-size: .78rem; }
+    .rev-tx { font-size: .8rem; color: #555; line-height: 1.75; }
+
+    /* ── 店舗情報 ── */
+    .info-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+    }
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid var(--ivory); }
+    .info-table th {
+      font-size: .72rem;
+      color: var(--sage);
+      font-weight: 700;
+      text-align: left;
+      padding: 11px 0;
+      width: 72px;
+      vertical-align: top;
+      letter-spacing: .05em;
+    }
+    .info-table td {
+      font-size: .8rem;
+      padding: 11px 0 11px 8px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .closed-days {
+      display: inline-block;
+      background: var(--terra-lt);
+      color: var(--terra);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-top: 3px;
+    }
+    .en-ok {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: var(--dark);
+      color: var(--cream);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 4px;
+    }
+    .map-placeholder {
+      background: var(--sage-lt);
+      border: 1.5px dashed var(--sage);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+      margin-top: 18px;
+      color: var(--sage);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    /* ── English Section ── */
+    .en-section {
+      background: var(--dark);
+      padding: 44px 22px;
+      text-align: center;
+    }
+    .en-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--cream);
+      font-size: 1.6rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      margin-bottom: 12px;
+    }
+    .en-section p {
+      color: rgba(255,255,255,.6);
+      font-size: .82rem;
+      line-height: 1.9;
+      margin-bottom: 24px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn-en {
+      display: inline-block;
+      background: var(--cream);
+      color: var(--dark);
+      font-size: .88rem;
+      font-weight: 900;
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: .08em;
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(165deg, var(--sage) 0%, #4a6640 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 50px 22px;
+    }
+    .cta-eyebrow {
+      font-size: .62rem;
+      letter-spacing: .25em;
+      opacity: .7;
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    .cta-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      letter-spacing: .05em;
+    }
+    .cta-section p { font-size: .82rem; opacity: .8; margin-bottom: 28px; line-height: 1.9; }
+    .cta-btns { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto; }
+    .cta-line {
+      display: block;
+      background: #06c755;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 16px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(6,199,85,.35);
+      letter-spacing: .06em;
+    }
+    .cta-tel {
+      display: block;
+      background: rgba(255,255,255,.15);
+      border: 1.5px solid rgba(255,255,255,.5);
+      color: var(--white);
+      font-size: .9rem;
+      font-weight: 700;
+      padding: 13px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      letter-spacing: .05em;
+    }
+    .cta-dm {
+      display: block;
+      background: linear-gradient(90deg, #f09040, #e04060, #7040b0);
+      color: var(--white);
+      font-size: .88rem;
+      font-weight: 700;
+      padding: 13px 0;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .cta-note {
+      font-size: .7rem;
+      opacity: .6;
+      margin-top: 14px;
+      line-height: 1.8;
+    }
+
+    footer {
+      background: #1a1208;
+      color: rgba(255,255,255,.3);
+      text-align: center;
+      padding: 24px 20px;
+      font-size: .68rem;
+      line-height: 2;
+    }
+    footer a { color: rgba(255,255,255,.4); text-decoration: none; }
+
+    @media (min-width: 580px) {
+      .hero-en { font-size: 3.6rem; }
+      .feat-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-btns { flex-direction: row; max-width: 420px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">▶ 提案用デモサイト — imua TOTAL BEAUTY ◀</div>
+
+<!-- ヘッダー -->
+<header>
+  <div class="logo">
+    imua
+    <span>TOTAL BEAUTY & SHARE SALON — 嘉手納</span>
+  </div>
+  <div class="header-actions">
+    <span class="hdr-en">🇺🇸 EN</span>
+    <a class="hdr-reserve" href="https://lin.ee/" target="_blank">LINE予約</a>
+  </div>
+</header>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="hero-label">KADENA, OKINAWA</div>
+  <div class="hero-en"><em>Forward</em><br>Beauty.</div>
+  <div class="hero-ja">前へ進む、あなたのための美容室。</div>
+  <p class="hero-copy">
+    ヘア・ネイル・フェイシャル・ボディケア・ファスティング。<br>
+    <strong>1カ所でキレイが叶う</strong>トータルビューティーサロン。<br>
+    嘉手納から、あなたの美しさを後押しします。
+  </p>
+  <span class="hero-en-badge">🇺🇸 English OK — All services available in English</span>
+  <div class="hero-chips">
+    <span class="chip">✂️ ヘア・着付</span>
+    <span class="chip">💅 ネイル</span>
+    <span class="chip">🌿 ハーブピーリング</span>
+    <span class="chip">🧠 ドライヘッドケア</span>
+    <span class="chip">💆 ボディケア</span>
+    <span class="chip">🍃 ファスティング</span>
+    <span class="chip">🪒 WAX脱毛</span>
+    <span class="chip">🤝 シェアサロン</span>
+  </div>
+  <div class="hero-btns">
+    <a class="btn-main" href="tel:0989560770">📞 予約する</a>
+    <a class="btn-sub" href="https://www.instagram.com/imua.totalbeauty/" target="_blank">📷 Instagram</a>
+  </div>
+</div>
+
+<!-- コンセプト帯 -->
+<div class="concept-strip">
+  <p>CONCEPT</p>
+  <h2>"imua" — <span>ハワイ語で「前へ進む」</span><br>美しくなって、前へ。</h2>
+</div>
+
+<!-- 特徴 -->
+<section class="white">
+  <p class="sec-eyebrow">WHY CHOOSE US</p>
+  <h2 class="sec-title">imuaが選ばれる理由</h2>
+  <div class="sec-rule"></div>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-icon">🏠</div>
+      <div class="feat-title">1カ所で全部完結</div>
+      <div class="feat-desc">ヘアからネイル、ボディケアまでトータルで対応。予約のたびに移動する必要なし</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🇺🇸</div>
+      <div class="feat-title">English OK</div>
+      <div class="feat-desc">All services available in English. 嘉手納基地周辺のお客様も安心してご利用いただけます</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">🚪</div>
+      <div class="feat-title">完全予約制・個室</div>
+      <div class="feat-desc">防音対応の完全個室。周りを気にせずプライベートな時間を過ごせます</div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon">👶</div>
+      <div class="feat-title">お子様連れOK</div>
+      <div class="feat-desc">小さなお子様と一緒でも安心。ゆったりとした空間でリラックスできます</div>
+    </div>
+  </div>
+</section>
+
+<!-- サービス -->
+<section class="ivory">
+  <p class="sec-eyebrow">SERVICES</p>
+  <h2 class="sec-title">サービス一覧</h2>
+  <div class="sec-rule"></div>
+  <div class="srv-list">
+
+    <div class="srv-row">
+      <div class="srv-icon-lg">✂️</div>
+      <div class="srv-body">
+        <h3>ヘア・着付け</h3>
+        <p>milbon取り扱いサロン。カット・カラー・トリートメントに加え、着付けサービスも提供。日常使いから晴れの日まで対応します。</p>
+        <div class="srv-tags">
+          <span class="srv-tag">カット</span>
+          <span class="srv-tag">カラー</span>
+          <span class="srv-tag">トリートメント</span>
+          <span class="srv-tag">着付け</span>
+          <span class="srv-tag">milbon使用</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="srv-row terra">
+      <div class="srv-icon-lg">💅</div>
+      <div class="srv-body">
+        <h3>ネイル</h3>
+        <p>ジェルネイル・ネイルアート・フットネイルなど幅広く対応。ヘアやまつげと同時施術も可能で時間を有効活用できます。</p>
+        <div class="srv-tags">
+          <span class="srv-tag t">ジェルネイル</span>
+          <span class="srv-tag t">ネイルアート</span>
+          <span class="srv-tag t">フットネイル</span>
+          <span class="srv-tag t">同時施術OK</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="srv-row">
+      <div class="srv-icon-lg">🌿</div>
+      <div class="srv-body">
+        <h3>フェイシャル・ハーブピーリング</h3>
+        <p>敏感肌対応のハーブピーリングで毛穴・くすみ・ニキビ跡をケア。肌リセットWフェイシャルで透明感UP。</p>
+        <div class="srv-tags">
+          <span class="srv-tag">ハーブピーリング</span>
+          <span class="srv-tag">Wフェイシャル</span>
+          <span class="srv-tag">敏感肌OK</span>
+          <span class="srv-tag">小顔ケア</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="srv-row terra">
+      <div class="srv-icon-lg">🧠</div>
+      <div class="srv-body">
+        <h3>ドライヘッドケア・ボディケア</h3>
+        <p>脳疲労・眼精疲労をほぐすドライヘッドケア。タイ式マッサージ・アロマトリートメントで全身のコンディションを整えます。</p>
+        <div class="srv-tags">
+          <span class="srv-tag t">ドライヘッドケア</span>
+          <span class="srv-tag t">タイ式マッサージ</span>
+          <span class="srv-tag t">アロマ</span>
+          <span class="srv-tag t">脳疲労ケア</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="srv-row gold">
+      <div class="srv-icon-lg">🍃</div>
+      <div class="srv-body">
+        <h3>ファスティングプログラム</h3>
+        <p>体の内側からリセット。専門スタッフが伴走するファスティング企画で、身体の変化を実感してください。</p>
+        <div class="srv-tags">
+          <span class="srv-tag g">ファスティング</span>
+          <span class="srv-tag g">デトックス</span>
+          <span class="srv-tag g">体質改善</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="srv-row">
+      <div class="srv-icon-lg">🪒</div>
+      <div class="srv-body">
+        <h3>WAX脱毛・その他</h3>
+        <p>WAX脱毛やシェアサロンスペースの貸し出しも。美容師・セラピストの方のサロン利用もお気軽にご相談ください。</p>
+        <div class="srv-tags">
+          <span class="srv-tag">WAX脱毛</span>
+          <span class="srv-tag">シェアサロン</span>
+          <span class="srv-tag">業務委託相談OK</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 料金 -->
+<section class="white">
+  <p class="sec-eyebrow">PRICING</p>
+  <h2 class="sec-title">料金案内</h2>
+  <div class="sec-rule"></div>
+  <div class="price-list">
+
+    <div class="price-item">
+      <div class="pi-left">
+        <span class="pi-tag">FACIAL</span>
+        <div class="pi-name">ハーブピーリング（初回）</div>
+        <div class="pi-desc">60分 / 敏感肌OK / 毛穴・ニキビ跡・くすみに</div>
+      </div>
+      <div class="pi-price">
+        <span class="regular">¥11,000</span>
+        <span class="now">¥9,900</span>
+        <span class="unit">（税込）</span>
+      </div>
+    </div>
+
+    <div class="price-item">
+      <div class="pi-left">
+        <span class="pi-tag">HEAD SPA</span>
+        <div class="pi-name">ドライヘッドケア（初回）</div>
+        <div class="pi-desc">60分 / 脳疲労・眼精疲労・頭皮コリに</div>
+      </div>
+      <div class="pi-price">
+        <span class="regular">¥11,000</span>
+        <span class="now">¥8,800</span>
+        <span class="unit">（税込）</span>
+      </div>
+    </div>
+
+    <div class="price-item">
+      <div class="pi-left">
+        <span class="pi-tag t">HEAD SPA</span>
+        <div class="pi-name">脳疲労ドライヘッドケア（お試し）</div>
+        <div class="pi-desc">40分 / 初めての方に / 気軽に体験</div>
+      </div>
+      <div class="pi-price">
+        <span class="regular">¥10,000</span>
+        <span class="now">¥4,400</span>
+        <span class="unit">（税込）</span>
+      </div>
+    </div>
+
+    <div class="price-item">
+      <div class="pi-left">
+        <span class="pi-tag">FACIAL</span>
+        <div class="pi-name">肌リセット Wフェイシャル（初回）</div>
+        <div class="pi-desc">60分 / 毛穴・透明感・リセット</div>
+      </div>
+      <div class="pi-price">
+        <span class="now">¥7,700</span>
+        <span class="unit">（税込）</span>
+      </div>
+    </div>
+
+  </div>
+  <div class="price-note">
+    💡 ネイル・ヘアなどの料金はご予約の際にお気軽にお問い合わせください。<br>
+    平均ご予約金額：¥6,000〜¥7,000（初回・2回目以降共通）
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="insta-wrap">
+  <p class="sec-eyebrow">INSTAGRAM</p>
+  <h2 class="sec-title">最新投稿</h2>
+  <div class="sec-rule"></div>
+
+  <div class="insta-header">
+    <div class="insta-avt">
+      <div class="avt-text">imua</div>
+    </div>
+    <div class="insta-meta">
+      <h3>@imua.totalbeauty</h3>
+      <p>imua[イムア] 美容室｜ネイルサロン｜リラクサロン<br>📍嘉手納 / English OK</p>
+      <div class="insta-stats">投稿336件 ・ フォロワー686人</div>
+    </div>
+  </div>
+
+  <!-- ハイライト -->
+  <div class="highlights">
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl1">💇</div></div>
+      <div class="hl-label">milbon:ID</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl2">📅</div></div>
+      <div class="hl-label">Schedule</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl3">🍃</div></div>
+      <div class="hl-label">ファスティング</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl4">💆</div></div>
+      <div class="hl-label">Relaxation</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl5">⭐</div></div>
+      <div class="hl-label">口コミ</div>
+    </div>
+    <div class="hl-item">
+      <div class="hl-ring"><div class="hl-circle hl6">🧴</div></div>
+      <div class="hl-label">DIYトリートメント</div>
+    </div>
+  </div>
+
+  <!-- グリッド（ナチュラル・ウェルネス系の色調で再現） -->
+  <div class="ig-grid">
+    <div class="ig-cell ic1">
+      <div class="ig-inner">
+        <div class="ig-emoji">✂️</div>
+        <div class="ig-cap">milbon<br>ヘアケア</div>
+      </div>
+    </div>
+    <div class="ig-cell ic2">
+      <div class="ig-inner">
+        <div class="ig-emoji">💅</div>
+        <div class="ig-cap">ネイル<br>デザイン</div>
+      </div>
+    </div>
+    <div class="ig-cell ic3">
+      <div class="ig-inner">
+        <div class="ig-emoji">🌿</div>
+        <div class="ig-cap">ハーブ<br>ピーリング</div>
+      </div>
+    </div>
+    <div class="ig-cell ic4">
+      <div class="ig-inner">
+        <div class="ig-emoji">🧠</div>
+        <div class="ig-cap">ドライ<br>ヘッドケア</div>
+      </div>
+    </div>
+    <div class="ig-cell ic5">
+      <div class="ig-inner">
+        <div class="ig-emoji">🍃</div>
+        <div class="ig-cap">ファスティング<br>企画</div>
+      </div>
+    </div>
+    <div class="ig-cell ic6">
+      <div class="ig-inner">
+        <div class="ig-emoji">💆</div>
+        <div class="ig-cap">Relaxation<br>ケア</div>
+      </div>
+    </div>
+    <div class="ig-cell ic7">
+      <div class="ig-inner">
+        <div class="ig-emoji">🎋</div>
+        <div class="ig-cap">着付け<br>サービス</div>
+      </div>
+    </div>
+    <div class="ig-cell ic8">
+      <div class="ig-inner">
+        <div class="ig-emoji">🧴</div>
+        <div class="ig-cap">DIY<br>トリートメント</div>
+      </div>
+    </div>
+    <div class="ig-cell ic9">
+      <div class="ig-inner">
+        <div class="ig-emoji">🪒</div>
+        <div class="ig-cap">WAX<br>脱毛</div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn-insta" href="https://www.instagram.com/imua.totalbeauty/" target="_blank">
+    📷 Instagramで最新投稿を見る
+  </a>
+</section>
+
+<!-- 口コミ -->
+<section class="white">
+  <p class="sec-eyebrow">REVIEWS</p>
+  <h2 class="sec-title">お客様の声</h2>
+  <div class="sec-rule"></div>
+
+  <div class="review-card">
+    <div class="rev-hd">
+      <div class="rev-av">😌</div>
+      <div>
+        <div class="rev-nm">30代女性</div>
+        <div class="rev-st">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-tx">「温かみのあるお部屋と担当スタッフの笑顔に癒されました。ドライヘッドケアは初めてでしたが、施術後は頭がスッキリして、疲れが取れた感じがします。また来ます。」</p>
+  </div>
+
+  <div class="review-card">
+    <div class="rev-hd">
+      <div class="rev-av">💆</div>
+      <div>
+        <div class="rev-nm">20代女性</div>
+        <div class="rev-st">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-tx">ハーブピーリングを初回でお試しさせてもらいました。敏感肌でも大丈夫かと不安でしたが、肌に優しく毛穴の汚れがスッキリ。次の日の肌のトーンアップに驚きました。</p>
+  </div>
+
+  <div class="review-card">
+    <div class="rev-hd">
+      <div class="rev-av">🇺🇸</div>
+      <div>
+        <div class="rev-nm">US Military spouse</div>
+        <div class="rev-st">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-tx">English-speaking staff made me feel so welcome. Got my nails done and a head spa treatment at the same time. The salon is beautiful and relaxing. Highly recommend to anyone near Kadena!</p>
+  </div>
+</section>
+
+<!-- English Section -->
+<div class="en-section">
+  <h2>Welcome to imua — English OK</h2>
+  <p>
+    All services available in English.<br>
+    We warmly welcome customers from Kadena Air Base and surrounding areas.<br>
+    Feel free to contact us via LINE, Instagram DM, or phone.
+  </p>
+  <a class="btn-en" href="https://www.instagram.com/imua.totalbeauty/" target="_blank">DM us on Instagram</a>
+</div>
+
+<!-- 店舗情報 -->
+<section class="ivory">
+  <p class="sec-eyebrow">ACCESS</p>
+  <h2 class="sec-title">店舗情報</h2>
+  <div class="sec-rule"></div>
+  <div class="info-card">
+    <table class="info-table">
+      <tr>
+        <th>サロン名</th>
+        <td>imua TOTAL BEAUTY and SHARE SALON</td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td>沖縄県中頭郡嘉手納町水釜189-1<br><span style="font-size:.72rem;color:var(--sub);">58号線沿い / ネーブル嘉手納から名護方面 約700m</span></td>
+      </tr>
+      <tr>
+        <th>電話</th>
+        <td><a href="tel:0989560770" style="color:var(--sage);font-weight:700;">098-956-0770</a></td>
+      </tr>
+      <tr>
+        <th>メール</th>
+        <td><a href="mailto:imua.totalbeauty@gmail.com" style="color:var(--sage);">imua.totalbeauty@gmail.com</a></td>
+      </tr>
+      <tr>
+        <th>営業時間</th>
+        <td>10:00 〜 20:00（完全予約制）</td>
+      </tr>
+      <tr>
+        <th>定休日</th>
+        <td>
+          水曜日・第1日曜日・第3日曜日
+          <br><span class="closed-days">※変更はInstagramでご確認ください</span>
+        </td>
+      </tr>
+      <tr>
+        <th>言語</th>
+        <td><span class="en-ok">🇺🇸 English OK</span></td>
+      </tr>
+      <tr>
+        <th>子ども</th>
+        <td>お子様連れ歓迎 👶</td>
+      </tr>
+      <tr>
+        <th>予約方法</th>
+        <td>LINE / Instagram DM / 電話</td>
+      </tr>
+    </table>
+    <div class="map-placeholder">
+      📍 Googleマップで経路を見る<br>
+      <span style="font-size:.72rem;font-weight:400;color:var(--sub);">
+        嘉手納町水釜189-1（実際のサイトにはGoogleマップを埋め込み）
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <p class="cta-eyebrow">RESERVATION</p>
+  <h2>ご予約・お問い合わせ</h2>
+  <p>
+    LINE・Instagram DM・お電話からご予約いただけます。<br>
+    English OK — feel free to message us anytime.
+  </p>
+  <div class="cta-btns">
+    <a class="cta-line" href="#" target="_blank">📱 LINEで予約する</a>
+    <a class="cta-tel" href="tel:0989560770">📞 098-956-0770</a>
+    <a class="cta-dm" href="https://www.instagram.com/imua.totalbeauty/" target="_blank">📷 Instagram DM</a>
+  </div>
+  <p class="cta-note">
+    営業時間：10:00〜20:00<br>
+    定休：水曜・第1&3日曜 ／ 完全予約制
+  </p>
+</div>
+
+<footer>
+  <p>imua TOTAL BEAUTY and SHARE SALON</p>
+  <p>〒904-0204 沖縄県中頭郡嘉手納町水釜189-1</p>
+  <p>TEL: <a href="tel:0989560770">098-956-0770</a> ／ MAIL: <a href="mailto:imua.totalbeauty@gmail.com">imua.totalbeauty@gmail.com</a></p>
+  <p style="margin-top:10px;">© 2026 imua TOTAL BEAUTY All rights reserved.</p>
+</footer>
+
+</body>
+</html>
