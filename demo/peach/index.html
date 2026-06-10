@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEACH｜沖縄ネイル・マツエク・脱毛｜嘉手納・読谷</title>
+  <meta name="description" content="沖縄県嘉手納・読谷のトータルビューティーサロンPEACH。ネイル・まつげエクステ・全身脱毛・よもぎ蒸し。全身脱毛初回¥5,840。LINE予約OK。駐車場8台完備。">
+  <style>
+    :root {
+      --pink:      #f4879e;
+      --pink-deep: #e0637e;
+      --pink-pale: #fff0f4;
+      --pink-mid:  #fcd5df;
+      --gold:      #c8a050;
+      --dark:      #3d1f2d;
+      --text:      #4a2035;
+      --sub:       #9a6878;
+      --white:     #ffffff;
+      --radius:    16px;
+      --shadow:    0 4px 24px rgba(244,135,158,.15);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+    }
+
+    /* ── デモバナー ── */
+    .demo-banner {
+      background: #2d1a26;
+      color: #f4c0cc;
+      text-align: center;
+      padding: 9px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    /* ── ヘッダー ── */
+    header {
+      background: var(--white);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--pink-mid);
+      box-shadow: 0 2px 12px rgba(244,135,158,.12);
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-circle {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: .65rem; font-weight: 900;
+      letter-spacing: -.02em; text-align: center; line-height: 1.2;
+    }
+    .logo-text { font-size: .85rem; font-weight: 900; color: var(--dark); letter-spacing: .05em; }
+    .logo-text span { display: block; font-size: .6rem; color: var(--sub); font-weight: 500; }
+    .btn-line {
+      background: #06c755;
+      color: var(--white);
+      font-size: .78rem;
+      font-weight: 800;
+      padding: 8px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: .04em;
+    }
+
+    /* ── ヒーロー ── */
+    .hero {
+      background: linear-gradient(160deg, #fff0f4 0%, #fce8ef 40%, #f8d5e0 100%);
+      padding: 44px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '🌸';
+      position: absolute;
+      top: -10px; right: -10px;
+      font-size: 120px;
+      opacity: .08;
+    }
+    .hero::after {
+      content: '🌸';
+      position: absolute;
+      bottom: -20px; left: -20px;
+      font-size: 100px;
+      opacity: .06;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      font-size: .68rem;
+      font-weight: 700;
+      padding: 5px 18px;
+      border-radius: 50px;
+      letter-spacing: .12em;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 14px;
+      letter-spacing: -.01em;
+    }
+    .hero h1 em { color: var(--pink-deep); font-style: normal; }
+    .hero-sub {
+      font-size: .88rem;
+      color: var(--sub);
+      margin-bottom: 28px;
+      line-height: 1.8;
+    }
+
+    /* サービスピル */
+    .service-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    .pill {
+      background: var(--white);
+      border: 1.5px solid var(--pink-mid);
+      color: var(--pink-deep);
+      font-size: .75rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 50px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-btns { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto; }
+    .btn-primary {
+      display: block;
+      background: linear-gradient(135deg, var(--pink), var(--pink-deep));
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 16px 0;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(244,135,158,.45);
+      letter-spacing: .05em;
+    }
+    .btn-line-lg {
+      display: block;
+      background: #06c755;
+      color: var(--white);
+      font-size: .95rem;
+      font-weight: 800;
+      padding: 14px 0;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+      letter-spacing: .05em;
+    }
+    .btn-outline {
+      display: block;
+      background: var(--white);
+      border: 2px solid var(--pink);
+      color: var(--pink-deep);
+      font-size: .9rem;
+      font-weight: 700;
+      padding: 12px 0;
+      border-radius: 50px;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    /* ── 実績帯 ── */
+    .stat-strip {
+      background: linear-gradient(135deg, var(--pink-deep), var(--pink));
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+    }
+    .stat-item .n { color: var(--white); font-size: 1.4rem; font-weight: 900; line-height: 1; }
+    .stat-item .l { color: rgba(255,255,255,.8); font-size: .62rem; font-weight: 600; margin-top: 4px; }
+    .stat-div { width: 1px; background: rgba(255,255,255,.25); }
+
+    /* ── セクション共通 ── */
+    section { padding: 46px 20px; }
+    section.pale { background: var(--pink-pale); }
+    .sec-title {
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .sec-title::after {
+      content: '';
+      display: block;
+      width: 36px; height: 3px;
+      background: var(--pink);
+      margin: 8px auto 26px;
+      border-radius: 2px;
+    }
+    .sec-sub { text-align: center; font-size: .78rem; color: var(--sub); margin-top: -20px; margin-bottom: 24px; }
+
+    /* ── サービスカード ── */
+    .service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .srv-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px 16px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--pink);
+      transition: transform .15s;
+    }
+    .srv-card:active { transform: scale(.97); }
+    .srv-icon { font-size: 2rem; margin-bottom: 8px; }
+    .srv-name { font-size: .88rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+    .srv-desc { font-size: .72rem; color: var(--sub); line-height: 1.5; }
+
+    /* ── 料金 ── */
+    .price-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow);
+      border-left: 4px solid var(--pink);
+    }
+    .price-card.gold { border-left-color: var(--gold); }
+    .price-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .tag-pink { background: #fde8ef; color: var(--pink-deep); }
+    .tag-gold { background: #fdf3e0; color: #9a6020; }
+    .tag-green{ background: #e0f7e9; color: #1a7a3a; }
+    .price-name { font-size: .95rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
+    .price-desc { font-size: .76rem; color: var(--sub); margin-bottom: 10px; line-height: 1.55; }
+    .price-row { display: flex; align-items: baseline; gap: 10px; }
+    .price-old { font-size: .8rem; color: #bbb; text-decoration: line-through; }
+    .price-new { font-size: 1.35rem; font-weight: 900; color: var(--pink-deep); }
+    .price-new small { font-size: .7rem; color: var(--sub); font-weight: 400; margin-left: 4px; }
+
+    /* 同時施術バナー */
+    .simultaneous-box {
+      background: linear-gradient(135deg, var(--dark), #5a2840);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 14px;
+    }
+    .simultaneous-box h3 { font-size: 1rem; font-weight: 900; margin-bottom: 6px; }
+    .simultaneous-box p { font-size: .8rem; opacity: .85; }
+    .simultaneous-box .highlight { color: var(--pink-mid); font-weight: 800; }
+
+    /* ── Instagram グリッド ── */
+    .insta-section { background: var(--pink-pale); }
+    .insta-profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .insta-avt {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f9a8c2, #f4879e, #e05070);
+      display: flex; align-items: center; justify-content: center;
+      font-size: .65rem; font-weight: 900; color: var(--white);
+      text-align: center; line-height: 1.3;
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--pink);
+      flex-shrink: 0;
+    }
+    .insta-info h3 { font-size: .88rem; font-weight: 800; color: var(--dark); }
+    .insta-info p  { font-size: .72rem; color: var(--sub); line-height: 1.5; }
+    .insta-info .flw { font-size: .7rem; color: var(--pink-deep); font-weight: 700; margin-top: 3px; }
+
+    /* ハイライトリール */
+    .highlights {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .highlight-item { display: flex; flex-direction: column; align-items: center; gap: 6px; flex-shrink: 0; }
+    .highlight-ring {
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      border: 2px solid var(--pink);
+      padding: 3px;
+    }
+    .highlight-circle {
+      width: 100%; height: 100%;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+    }
+    .h1 { background: linear-gradient(135deg, #ffd6e7, #f4a0bc); }
+    .h2 { background: linear-gradient(135deg, #d4f0d4, #8bcc8b); }
+    .h3 { background: linear-gradient(135deg, #e8d8f0, #c0a0e0); }
+    .h4 { background: linear-gradient(135deg, #ffe8c0, #f0c060); }
+    .highlight-label { font-size: .6rem; color: var(--sub); text-align: center; font-weight: 600; }
+
+    /* グリッド */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+    .ig-post {
+      aspect-ratio: 1;
+      position: relative;
+      overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    /* ネイルデザイン写真の雰囲気をCSSで再現 */
+    .ig1 { background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f48fb1); }
+    .ig2 { background: linear-gradient(135deg, #ffebee, #ffcdd2, #ef9a9a); }
+    .ig3 { background: linear-gradient(135deg, #fce4ec, #f06292, #e91e63); }
+    .ig4 { background: linear-gradient(135deg, #fff8f0, #ffd4a0, #ffb870); }
+    .ig5 { background: linear-gradient(135deg, #f8e8f0, #e8c0d4, #d490b8); }
+    .ig6 { background: linear-gradient(135deg, #fff0f0, #ffc8c8, #ff9898); }
+    .ig7 { background: linear-gradient(135deg, #f0f8ff, #c8e4f8, #90c8f0); }
+    .ig8 { background: linear-gradient(135deg, #fef9e7, #fdeaa0, #fcd060); }
+    .ig9 { background: linear-gradient(135deg, #f8f0f8, #e0c0e8, #c890d8); }
+
+    .ig-inner {
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 8px; text-align: center;
+      width: 100%;
+    }
+    .ig-emoji { font-size: 1.6rem; margin-bottom: 4px; }
+    .ig-text  { font-size: .55rem; font-weight: 700; color: rgba(60,10,30,.7); line-height: 1.4; }
+
+    .btn-insta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(90deg, #f77737, #fd1d1d, #833ab4, #405de6);
+      color: var(--white);
+      font-size: .88rem;
+      font-weight: 800;
+      padding: 14px 0;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+
+    /* ── 口コミ ── */
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    .rev-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .rev-av {
+      width: 38px; height: 38px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .rv1 { background: #fde8ef; }
+    .rv2 { background: #e8f5e9; }
+    .rv3 { background: #fef3e2; }
+    .rev-name { font-size: .82rem; font-weight: 800; color: var(--dark); }
+    .rev-stars { color: #f4a010; font-size: .8rem; }
+    .rev-text { font-size: .8rem; color: #555; line-height: 1.65; }
+
+    /* ── 店舗情報 ── */
+    .shop-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .shop-tab {
+      flex: 1;
+      padding: 10px 0;
+      border-radius: 50px;
+      font-size: .82rem;
+      font-weight: 700;
+      text-align: center;
+      border: 2px solid var(--pink-mid);
+      color: var(--sub);
+      background: var(--white);
+      cursor: pointer;
+    }
+    .shop-tab.active {
+      background: var(--pink);
+      border-color: var(--pink);
+      color: var(--white);
+    }
+    .info-table { width: 100%; border-collapse: collapse; }
+    .info-table tr { border-bottom: 1px solid #f0d0d8; }
+    .info-table th {
+      font-size: .72rem; color: var(--pink-deep); font-weight: 700;
+      text-align: left; padding: 10px 0; width: 72px; vertical-align: top;
+    }
+    .info-table td { font-size: .8rem; padding: 10px 0 10px 8px; color: var(--text); }
+    .shop-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    .map-placeholder {
+      background: #fde8ef;
+      border: 2px dashed var(--pink);
+      border-radius: var(--radius);
+      padding: 22px;
+      text-align: center;
+      margin-top: 16px;
+      color: var(--pink-deep);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    /* ── 注意事項 ── */
+    .notice {
+      background: #fff8e6;
+      border: 1px solid #fcd34d;
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .notice p { font-size: .75rem; color: #78350f; line-height: 1.65; }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: linear-gradient(160deg, var(--dark) 0%, #5a2840 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 46px 20px;
+    }
+    .cta-section h2 { font-size: 1.25rem; font-weight: 900; margin-bottom: 6px; }
+    .cta-section p  { font-size: .82rem; opacity: .8; margin-bottom: 26px; }
+    .cta-btns { display: flex; flex-direction: column; gap: 10px; max-width: 300px; margin: 0 auto; }
+    .cta-line {
+      display: block;
+      background: #06c755;
+      color: var(--white);
+      font-size: 1rem;
+      font-weight: 900;
+      padding: 16px 0;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(6,199,85,.35);
+    }
+    .cta-tel {
+      display: block;
+      background: var(--white);
+      color: var(--dark);
+      font-size: .95rem;
+      font-weight: 800;
+      padding: 14px 0;
+      border-radius: 50px;
+      text-decoration: none;
+    }
+    .cta-hours { font-size: .72rem; opacity: .6; margin-top: 14px; }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      padding: 20px;
+      font-size: .68rem;
+      line-height: 1.9;
+    }
+
+    @media (min-width: 580px) {
+      .hero h1 { font-size: 2.4rem; }
+      .service-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-btns { flex-direction: row; max-width: 480px; }
+      .hero-btns a { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">🌸 提案用デモサイト（実際のサイトでは削除） 🌸</div>
+
+<!-- ヘッダー -->
+<header>
+  <div class="logo-wrap">
+    <div class="logo-circle">total<br>beauty<br>salon</div>
+    <div class="logo-text">
+      PEACH
+      <span>嘉手納 / 読谷</span>
+    </div>
+  </div>
+  <a class="btn-line" href="https://lin.ee/TpbYzFi" target="_blank">📱 LINE予約</a>
+</header>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <span class="hero-eyebrow">💅 嘉手納・読谷のトータルビューティー</span>
+  <h1>キレイを、<br><em>全部ここで</em>。</h1>
+  <p class="hero-sub">
+    ネイル・まつげエクステ・全身脱毛・よもぎ蒸し<br>
+    ネイル×マツエクの<strong>同時施術</strong>で時短も叶う。<br>
+    口コミ評価 ★4.89 の隠れ家サロン。
+  </p>
+  <div class="service-pills">
+    <span class="pill">💅 ジェルネイル</span>
+    <span class="pill">👁 LEDマツエク</span>
+    <span class="pill">✨ 全身脱毛</span>
+    <span class="pill">🌿 よもぎ蒸し</span>
+    <span class="pill">💆 マッサージ</span>
+  </div>
+  <div class="hero-btns">
+    <a class="btn-line-lg" href="https://lin.ee/TpbYzFi" target="_blank">📱 LINEで予約する</a>
+    <a class="btn-primary" href="tel:0989532748">📞 電話で予約</a>
+  </div>
+</div>
+
+<!-- 実績帯 -->
+<div class="stat-strip">
+  <div class="stat-item"><div class="n">★4.89</div><div class="l">口コミ平均<br>（読谷店）</div></div>
+  <div class="stat-div"></div>
+  <div class="stat-item"><div class="n">2,514</div><div class="l">Instagram<br>投稿数</div></div>
+  <div class="stat-div"></div>
+  <div class="stat-item"><div class="n">5名</div><div class="l">スタッフ<br>在籍</div></div>
+  <div class="stat-div"></div>
+  <div class="stat-item"><div class="n">P8台</div><div class="l">無料<br>駐車場</div></div>
+</div>
+
+<!-- サービス -->
+<section class="pale">
+  <h2 class="sec-title">サービス一覧</h2>
+  <p class="sec-sub">トータルビューティーをワンストップで</p>
+  <div class="service-grid">
+    <div class="srv-card">
+      <div class="srv-icon">💅</div>
+      <div class="srv-name">ジェルネイル</div>
+      <div class="srv-desc">フット・ハンド。マグネット・アート・デザイン豊富に対応</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">👁️</div>
+      <div class="srv-name">LEDマツエク</div>
+      <div class="srv-desc">地域最安値水準。まつげパーム・まつげカール対応</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">✨</div>
+      <div class="srv-name">全身脱毛</div>
+      <div class="srv-desc">最新高速美肌脱毛器。顔・VIO込み初回¥5,840〜</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🌿</div>
+      <div class="srv-name">よもぎ蒸し</div>
+      <div class="srv-desc">温活・美肌・妊活サポート。心も身体も整える</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">💆</div>
+      <div class="srv-name">マッサージ</div>
+      <div class="srv-desc">リンパマッサージで全身スッキリ。新メニュー登場</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🧖</div>
+      <div class="srv-name">ハーブピーリング</div>
+      <div class="srv-desc">リベルハーブピーリングで透明感UP・毛穴ケア</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">🪒</div>
+      <div class="srv-name">VIO・ソープ脱毛</div>
+      <div class="srv-desc">デリケートゾーンも丁寧に対応。衛生管理徹底</div>
+    </div>
+    <div class="srv-card">
+      <div class="srv-icon">👨</div>
+      <div class="srv-name">メンズ対応</div>
+      <div class="srv-desc">メンズ全身脱毛・ネイルも対応。完全個室あり</div>
+    </div>
+  </div>
+
+  <!-- 同時施術バナー -->
+  <div style="margin-top:16px;">
+    <div class="simultaneous-box">
+      <h3>⏱️ ネイル × マツエク 同時施術で時短！</h3>
+      <p>別々に予約する必要なし。<span class="highlight">1回の来店でまとめてキレイ</span>になれます。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 料金 -->
+<section>
+  <h2 class="sec-title">人気メニュー・料金</h2>
+
+  <div class="price-card gold">
+    <span class="price-tag tag-gold">🌟 最もご要望が多い</span>
+    <div class="price-name">全身脱毛（顔・VIO込み）初回</div>
+    <div class="price-desc">最新高速美肌脱毛器を導入。顔・VIOを含む全身が初回このお値段。美容所登録済みの安心サロン。</div>
+    <div class="price-row">
+      <span class="price-new">¥5,840<small>（税込）</small></span>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <span class="price-tag tag-pink">💅 ネイル人気No.1</span>
+    <div class="price-name">マグネットネイル</div>
+    <div class="price-desc">ぷっくりとした立体感が人気のマグネットデザイン。季節・トレンドに合わせたデザイン提案あり。</div>
+    <div class="price-row">
+      <span class="price-new">¥4,500<small>（税込）</small></span>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <span class="price-tag tag-green">👁 マツエク人気</span>
+    <div class="price-name">まつげパーム</div>
+    <div class="price-desc">ビューラー不要の上向きカール。自まつげを活かしたナチュラル仕上げ。</div>
+    <div class="price-row">
+      <span class="price-new">¥3,500<small>（税込）〜</small></span>
+    </div>
+  </div>
+
+  <div class="price-card">
+    <span class="price-tag tag-pink">💅 初来店</span>
+    <div class="price-name">ネイル初回特典</div>
+    <div class="price-desc">初めてのご来店の方はお得な価格でご利用いただけます。</div>
+    <div class="price-row">
+      <span class="price-new">¥3,980<small>（税込）〜</small></span>
+    </div>
+  </div>
+
+  <div class="notice">
+    <p>💳 <strong>お支払いは現金のみ</strong>となります。ご来店前にご準備ください。<br>
+    🅿️ 嘉手納店は店舗裏に<strong>無料駐車場8台</strong>完備。お車でお気軽にどうぞ。</p>
+  </div>
+</section>
+
+<!-- Instagram -->
+<section class="insta-section">
+  <h2 class="sec-title">最新ネイルデザイン</h2>
+  <p class="sec-sub">Instagramで毎日更新中</p>
+
+  <div class="insta-profile">
+    <div class="insta-avt">PEACH<br>沖縄</div>
+    <div class="insta-info">
+      <h3>@peach_kadena_yomitan</h3>
+      <p>PEACH 沖縄マツエクネイル脱毛</p>
+      <div class="flw">投稿2,514件 ・ フォロワー1,315人</div>
+    </div>
+  </div>
+
+  <!-- ハイライト -->
+  <div class="highlights">
+    <div class="highlight-item">
+      <div class="highlight-ring">
+        <div class="highlight-circle h1">💅</div>
+      </div>
+      <div class="highlight-label">フットネイル</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-ring">
+        <div class="highlight-circle h2">📱</div>
+      </div>
+      <div class="highlight-label">LINE予約</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-ring">
+        <div class="highlight-circle h3">🧴</div>
+      </div>
+      <div class="highlight-label">VIOソープ</div>
+    </div>
+    <div class="highlight-item">
+      <div class="highlight-ring">
+        <div class="highlight-circle h4">🌿</div>
+      </div>
+      <div class="highlight-label">リベルハーブ</div>
+    </div>
+  </div>
+
+  <!-- 投稿グリッド（インスタ投稿の雰囲気を再現） -->
+  <div class="insta-grid">
+    <div class="ig-post ig1">
+      <div class="ig-inner">
+        <div class="ig-emoji">💅</div>
+        <div class="ig-text">フットネイル<br>春デザイン🌸</div>
+      </div>
+    </div>
+    <div class="ig-post ig2">
+      <div class="ig-inner">
+        <div class="ig-emoji">✨</div>
+        <div class="ig-text">ハンドネイル<br>冬ボルドー</div>
+      </div>
+    </div>
+    <div class="ig-post ig3">
+      <div class="ig-inner">
+        <div class="ig-emoji">❤️</div>
+        <div class="ig-text">レッド系<br>アート</div>
+      </div>
+    </div>
+    <div class="ig-post ig4">
+      <div class="ig-inner">
+        <div class="ig-emoji">🍑</div>
+        <div class="ig-text">PEACH<br>サロンロゴ</div>
+      </div>
+    </div>
+    <div class="ig-post ig5">
+      <div class="ig-inner">
+        <div class="ig-emoji">💗</div>
+        <div class="ig-text">マグネット<br>ピンク系</div>
+      </div>
+    </div>
+    <div class="ig-post ig6">
+      <div class="ig-inner">
+        <div class="ig-emoji">🌺</div>
+        <div class="ig-text">花柄アート<br>季節デザイン</div>
+      </div>
+    </div>
+    <div class="ig-post ig7">
+      <div class="ig-inner">
+        <div class="ig-emoji">💙</div>
+        <div class="ig-text">ブルー系<br>ニュアンス</div>
+      </div>
+    </div>
+    <div class="ig-post ig8">
+      <div class="ig-inner">
+        <div class="ig-emoji">⭐</div>
+        <div class="ig-text">全身脱毛<br>初回¥5,840</div>
+      </div>
+    </div>
+    <div class="ig-post ig9">
+      <div class="ig-inner">
+        <div class="ig-emoji">🔮</div>
+        <div class="ig-text">パープル<br>グラデーション</div>
+      </div>
+    </div>
+  </div>
+
+  <a class="btn-insta" href="https://www.instagram.com/peach_kadena_yomitan/" target="_blank">
+    📷 Instagramで全デザインを見る
+  </a>
+</section>
+
+<!-- 口コミ -->
+<section>
+  <h2 class="sec-title">お客様の声</h2>
+  <p class="sec-sub">口コミ平均 ★4.89（読谷店） ★4.43（嘉手納店）</p>
+
+  <div class="review-card">
+    <div class="rev-head">
+      <div class="rev-av rv1">😊</div>
+      <div>
+        <div class="rev-name">20代女性</div>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-text">ネイルとマツエクを同時にお願いしました！時間短縮できてすごく助かります。仕上がりも大満足でした。また来ます😊</p>
+  </div>
+
+  <div class="review-card">
+    <div class="rev-head">
+      <div class="rev-av rv2">🌸</div>
+      <div>
+        <div class="rev-name">30代女性</div>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-text">全身脱毛の初回がこのお値段はびっくりです！スタッフさんも丁寧で、個室なのでリラックスできました。継続コースも検討中です。</p>
+  </div>
+
+  <div class="review-card">
+    <div class="rev-head">
+      <div class="rev-av rv3">💆</div>
+      <div>
+        <div class="rev-name">40代女性</div>
+        <div class="rev-stars">★★★★★</div>
+      </div>
+    </div>
+    <p class="rev-text">よもぎ蒸しが気に入って毎月通っています。体が温まって代謝が上がった気がします。ネイルも一緒にやるようになりました。</p>
+  </div>
+</section>
+
+<!-- 店舗情報 -->
+<section class="pale">
+  <h2 class="sec-title">店舗情報</h2>
+
+  <div class="shop-tabs">
+    <div class="shop-tab active">🏠 嘉手納店</div>
+    <div class="shop-tab">🌺 読谷店</div>
+  </div>
+
+  <!-- 嘉手納店 -->
+  <table class="info-table" id="kadena-info">
+    <tr>
+      <th>住所</th>
+      <td>沖縄県中頭郡嘉手納町水釜６-9-12</td>
+    </tr>
+    <tr>
+      <th>電話</th>
+      <td><a href="tel:0989532748" style="color:var(--pink-deep);font-weight:700;">098-953-2748</a></td>
+    </tr>
+    <tr>
+      <th>営業</th>
+      <td>9:00〜19:30<span class="shop-badge">LINE予約OK</span></td>
+    </tr>
+    <tr>
+      <th>定休日</th>
+      <td>不定休</td>
+    </tr>
+    <tr>
+      <th>駐車場</th>
+      <td>店舗裏に8台（無料）</td>
+    </tr>
+    <tr>
+      <th>支払い</th>
+      <td>現金のみ</td>
+    </tr>
+    <tr>
+      <th>アクセス</th>
+      <td>ネーブル嘉手納より車で1分</td>
+    </tr>
+  </table>
+
+  <!-- 読谷店情報（折りたたみ式イメージ） -->
+  <details style="margin-top:16px;">
+    <summary style="background:var(--pink-pale);border-radius:var(--radius);padding:12px 16px;font-weight:700;font-size:.85rem;color:var(--dark);cursor:pointer;list-style:none;display:flex;justify-content:space-between;">
+      🌺 読谷店の情報を見る ▼
+    </summary>
+    <table class="info-table" style="margin-top:12px;">
+      <tr>
+        <th>住所</th>
+        <td>沖縄県中頭郡読谷村伊良皆374-3 3F</td>
+      </tr>
+      <tr>
+        <th>営業</th>
+        <td>10:00〜19:30</td>
+      </tr>
+      <tr>
+        <th>定休日</th>
+        <td>不定休</td>
+      </tr>
+      <tr>
+        <th>アクセス</th>
+        <td>読谷高校から徒歩3分<br>のぼり苑（焼肉屋）隣のビル3階</td>
+      </tr>
+      <tr>
+        <th>口コミ</th>
+        <td>★4.89（20件）</td>
+      </tr>
+    </table>
+  </details>
+
+  <div class="map-placeholder">
+    📍 Googleマップで経路を確認<br>
+    <span style="font-size:.72rem;font-weight:400;color:var(--sub);">
+      嘉手納町水釜6-9-12（実際のサイトにはGoogleマップを埋め込み）
+    </span>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>ご予約はLINEが便利です</h2>
+  <p>24時間いつでもLINEから予約OK。<br>ネイル・マツエク・脱毛まとめてご相談ください。</p>
+  <div class="cta-btns">
+    <a class="cta-line" href="https://lin.ee/TpbYzFi" target="_blank">📱 LINEで予約・お問い合わせ</a>
+    <a class="cta-tel" href="tel:0989532748">📞 電話で予約（嘉手納店）</a>
+  </div>
+  <p class="cta-hours">営業 9:00〜19:30 ／ 不定休<br>美容所登録済 ✅ 駐車場8台 🅿️</p>
+</div>
+
+<footer>
+  <p>total beauty salon PEACH</p>
+  <p>嘉手納店：沖縄県中頭郡嘉手納町水釜6-9-12 ／ TEL 098-953-2748</p>
+  <p>読谷店：沖縄県中頭郡読谷村伊良皆374-3 3F</p>
+  <p style="margin-top:8px;">© 2026 PEACH All rights reserved.</p>
+</footer>
+
+</body>
+</html>
