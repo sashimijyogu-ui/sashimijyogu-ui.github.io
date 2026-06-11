@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOLKISS | Private Blue Cave Diving &amp; Snorkeling in Yomitan, Okinawa — English OK</title>
+  <meta name="description" content="SOLKISS is a private-charter dive shop in Yomitan, Okinawa. Blue Cave diving &amp; snorkeling, SUP and surfing — always one group at a time. Rated 5.0 from 200+ reviews. Book easily in English.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:     #06283d;
+      --deep:     #0a3d5c;
+      --ocean:    #1363a0;
+      --aqua:     #2fb6c9;
+      --aqua-lt:  #e3f5f7;
+      --sand:     #f8f4ec;
+      --coral:    #ff7a5c;
+      --coral-dk: #e85f40;
+      --white:    #ffffff;
+      --text:     #24323c;
+      --sub:      #62788a;
+      --line:     #06c755;
+      --radius:   16px;
+      --shadow:   0 6px 30px rgba(6,40,61,.12);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', 'Helvetica Neue', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+
+    /* ── Demo banner ── */
+    .demo-banner {
+      background: var(--navy);
+      color: #9fd8e8;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(6,40,61,.08);
+      padding: 12px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { line-height: 1; }
+    .logo strong {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem; font-weight: 700;
+      letter-spacing: .18em; color: var(--navy);
+    }
+    .logo span {
+      display: block;
+      font-size: .56rem; font-weight: 600;
+      letter-spacing: .22em; color: var(--aqua);
+      margin-top: 3px; text-transform: uppercase;
+    }
+    .hdr-cta {
+      background: var(--coral);
+      color: var(--white);
+      font-size: .8rem; font-weight: 700;
+      padding: 10px 20px; border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(255,122,92,.35);
+      transition: transform .15s ease;
+    }
+    .hdr-cta:hover { transform: translateY(-1px); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(ellipse 90% 60% at 80% -10%, rgba(47,182,201,.35), transparent 60%),
+        radial-gradient(ellipse 70% 50% at 10% 110%, rgba(19,99,160,.5), transparent 60%),
+        linear-gradient(170deg, var(--navy) 0%, var(--deep) 45%, var(--ocean) 100%);
+      color: var(--white);
+      padding: 72px 24px 110px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hero::after { /* light rays */
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,.05) 46%, transparent 52%, rgba(255,255,255,.04) 58%, transparent 64%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: .72rem; font-weight: 700;
+      letter-spacing: .28em; text-transform: uppercase;
+      color: #8fe0ec;
+      border: 1px solid rgba(143,224,236,.4);
+      padding: 6px 18px; border-radius: 50px;
+      margin-bottom: 26px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.4rem, 6.4vw, 4.2rem);
+      font-weight: 600; line-height: 1.18;
+      letter-spacing: .02em;
+      max-width: 760px; margin: 0 auto 22px;
+    }
+    .hero h1 em { font-style: italic; color: #7fdcec; }
+    .hero-sub {
+      font-size: clamp(.95rem, 2.2vw, 1.08rem);
+      font-weight: 300; color: #cfe8f2;
+      max-width: 600px; margin: 0 auto 34px;
+    }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      justify-content: center; margin-bottom: 38px;
+    }
+    .hero-badge {
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.22);
+      backdrop-filter: blur(4px);
+      font-size: .78rem; font-weight: 600;
+      padding: 8px 16px; border-radius: 50px;
+    }
+    .hero-badge b { color: #ffd98a; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+    .btn-primary {
+      background: var(--coral);
+      color: var(--white);
+      font-size: .95rem; font-weight: 800;
+      padding: 16px 38px; border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 8px 26px rgba(232,95,64,.45);
+      transition: transform .15s ease;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,.55);
+      font-size: .95rem; font-weight: 600;
+      padding: 15px 34px; border-radius: 50px;
+      text-decoration: none;
+      transition: background .15s ease;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,.1); }
+    .hero-wave {
+      position: absolute; left: 0; right: 0; bottom: -1px;
+      line-height: 0;
+    }
+    .hero-wave svg { width: 100%; height: 70px; display: block; }
+
+    /* ── Trust strip ── */
+    .trust {
+      background: var(--white);
+      padding: 34px 24px 10px;
+    }
+    .trust-grid {
+      max-width: 920px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 18px; text-align: center;
+    }
+    .trust-item .t-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.1rem; font-weight: 700;
+      color: var(--ocean); line-height: 1.1;
+    }
+    .trust-item .t-num span { color: #f5b942; }
+    .trust-item .t-label {
+      font-size: .72rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: var(--sub); margin-top: 4px;
+    }
+    @media (max-width: 640px) {
+      .trust-grid { grid-template-columns: repeat(2, 1fr); gap: 22px 12px; }
+    }
+
+    /* ── Sections ── */
+    section { padding: 76px 0; }
+    .sec-eyebrow {
+      font-size: .7rem; font-weight: 800;
+      letter-spacing: .3em; text-transform: uppercase;
+      color: var(--aqua); text-align: center; margin-bottom: 12px;
+    }
+    .sec-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+      font-weight: 600; line-height: 1.25;
+      color: var(--navy); text-align: center;
+      max-width: 640px; margin: 0 auto 16px;
+    }
+    .sec-lead {
+      text-align: center; color: var(--sub);
+      font-size: .95rem; max-width: 580px; margin: 0 auto 50px;
+    }
+
+    /* ── Why private ── */
+    .why { background: var(--sand); }
+    .why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+    }
+    .why-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 26px;
+      box-shadow: var(--shadow);
+      border-top: 4px solid var(--aqua);
+    }
+    .why-card .w-icon { font-size: 2rem; margin-bottom: 14px; }
+    .why-card h3 {
+      font-size: 1.02rem; font-weight: 800;
+      color: var(--navy); margin-bottom: 10px; line-height: 1.4;
+    }
+    .why-card p { font-size: .88rem; color: var(--sub); }
+    @media (max-width: 760px) { .why-grid { grid-template-columns: 1fr; } }
+
+    /* ── Tours ── */
+    .tours-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
+    }
+    .tour-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--white);
+      display: flex; flex-direction: column;
+      border: 1px solid rgba(6,40,61,.06);
+    }
+    .tour-visual {
+      height: 150px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.2rem;
+      position: relative;
+    }
+    .tv-cave   { background: linear-gradient(140deg, #06283d, #0d5e8a 60%, #2fb6c9); }
+    .tv-dive   { background: linear-gradient(140deg, #052e44, #1363a0 60%, #45c4d6); }
+    .tv-fun    { background: linear-gradient(140deg, #043548, #0e7490 60%, #67d8e4); }
+    .tv-sup    { background: linear-gradient(140deg, #0a4f6e, #2fb6c9 65%, #ffd98a); }
+    .tour-tag {
+      position: absolute; top: 12px; left: 12px;
+      background: rgba(255,255,255,.92);
+      color: var(--ocean);
+      font-size: .64rem; font-weight: 800;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 5px 12px; border-radius: 50px;
+    }
+    .tour-tag.hot { background: var(--coral); color: var(--white); }
+    .tour-body { padding: 26px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+    .tour-body h3 {
+      font-size: 1.12rem; font-weight: 800;
+      color: var(--navy); line-height: 1.35; margin-bottom: 8px;
+    }
+    .tour-body .t-desc { font-size: .87rem; color: var(--sub); margin-bottom: 16px; flex: 1; }
+    .tour-meta {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;
+    }
+    .tour-meta span {
+      font-size: .7rem; font-weight: 600;
+      background: var(--aqua-lt); color: var(--deep);
+      padding: 4px 12px; border-radius: 50px;
+    }
+    .tour-price {
+      display: flex; align-items: baseline; gap: 8px;
+      border-top: 1px dashed rgba(6,40,61,.15);
+      padding-top: 16px;
+    }
+    .tour-price .p-from { font-size: .72rem; color: var(--sub); }
+    .tour-price .p-num {
+      font-size: 1.5rem; font-weight: 800; color: var(--coral-dk);
+    }
+    .tour-price .p-unit { font-size: .72rem; color: var(--sub); }
+    .price-note {
+      text-align: center; font-size: .72rem; color: var(--sub);
+      margin-top: 26px;
+    }
+    @media (max-width: 760px) { .tours-grid { grid-template-columns: 1fr; } }
+
+    /* ── Booking steps ── */
+    .steps { background: linear-gradient(170deg, var(--navy), var(--deep)); color: var(--white); }
+    .steps .sec-title, .steps .sec-eyebrow { color: var(--white); }
+    .steps .sec-eyebrow { color: #8fe0ec; }
+    .steps .sec-lead { color: #b8d8e6; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .step-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 30px 26px;
+      text-align: center;
+    }
+    .step-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 44px; height: 44px; border-radius: 50%;
+      background: var(--aqua); color: var(--navy);
+      font-weight: 800; font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .step-card h3 { font-size: 1rem; font-weight: 800; margin-bottom: 10px; }
+    .step-card p { font-size: .85rem; color: #c4dde9; }
+    @media (max-width: 760px) { .steps-grid { grid-template-columns: 1fr; } }
+
+    /* ── Reviews ── */
+    .reviews { background: var(--sand); }
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .review-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .review-stars { color: #f5b942; font-size: .95rem; letter-spacing: .12em; margin-bottom: 12px; }
+    .review-card p { font-size: .86rem; color: var(--text); margin-bottom: 16px; }
+    .review-who { font-size: .74rem; font-weight: 700; color: var(--sub); }
+    .review-note { text-align: center; font-size: .72rem; color: var(--sub); margin-top: 24px; }
+    @media (max-width: 760px) { .review-grid { grid-template-columns: 1fr; } }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    details {
+      background: var(--white);
+      border: 1px solid rgba(6,40,61,.1);
+      border-radius: 12px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    summary {
+      cursor: pointer;
+      padding: 18px 22px;
+      font-size: .92rem; font-weight: 700;
+      color: var(--navy);
+      list-style: none;
+      position: relative;
+      padding-right: 48px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: '+';
+      position: absolute; right: 20px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.3rem; font-weight: 400; color: var(--aqua);
+    }
+    details[open] summary::after { content: '−'; }
+    details .faq-a {
+      padding: 0 22px 20px;
+      font-size: .87rem; color: var(--sub);
+    }
+
+    /* ── Access ── */
+    .access-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 30px;
+      align-items: start;
+    }
+    .access-table { width: 100%; border-collapse: collapse; }
+    .access-table th, .access-table td {
+      text-align: left; padding: 13px 6px;
+      border-bottom: 1px solid rgba(6,40,61,.1);
+      font-size: .88rem; vertical-align: top;
+    }
+    .access-table th {
+      color: var(--sub); font-weight: 700; white-space: nowrap;
+      width: 110px; font-size: .78rem; letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .access-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      min-height: 300px;
+    }
+    .access-map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; }
+    @media (max-width: 760px) { .access-grid { grid-template-columns: 1fr; } }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      background:
+        radial-gradient(ellipse 80% 70% at 50% 120%, rgba(47,182,201,.4), transparent 65%),
+        linear-gradient(170deg, var(--deep), var(--navy));
+      color: var(--white);
+      text-align: center;
+      padding: 84px 24px 96px;
+    }
+    .final-cta h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 600; line-height: 1.25; margin-bottom: 16px;
+    }
+    .final-cta p { color: #c4dde9; font-size: .95rem; max-width: 520px; margin: 0 auto 36px; }
+
+    /* ── Footer ── */
+    footer {
+      background: #041d2c;
+      color: #7d9cae;
+      text-align: center;
+      padding: 36px 24px 110px;
+      font-size: .78rem;
+    }
+    footer .f-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 700;
+      letter-spacing: .2em; color: var(--white);
+      margin-bottom: 10px;
+    }
+    footer a { color: #9fd8e8; text-decoration: none; }
+
+    /* ── Sticky CTA bar ── */
+    .sticky-cta {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 200;
+      display: flex; gap: 10px;
+      padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+      background: rgba(255,255,255,.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 -6px 24px rgba(6,40,61,.14);
+    }
+    .sticky-cta a {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      font-size: .85rem; font-weight: 800;
+      padding: 14px 8px; border-radius: 12px;
+      text-decoration: none;
+    }
+    .cta-line { background: var(--line); color: var(--white); }
+    .cta-dm   { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: var(--white); }
+    .cta-tel  { background: var(--navy); color: var(--white); }
+  </style>
+</head>
+<body>
+
+<div class="demo-banner">▶ DEMO PROPOSAL — SOLKISS English Landing Page（提案用デモサイト）◀</div>
+
+<header>
+  <div class="logo">
+    <strong>SOLKISS</strong>
+    <span>Private Marine Tours · Yomitan, Okinawa</span>
+  </div>
+  <a class="hdr-cta" href="#book">Book Now</a>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-eyebrow">Yomitan · Okinawa · Since the Blue Cave called us</span>
+  <h1>Okinawa's ocean,<br><em>all to yourselves.</em></h1>
+  <p class="hero-sub">SOLKISS runs fully private marine tours — one group at a time, never mixed with strangers. Blue Cave diving &amp; snorkeling, SUP and surfing, guided by local pros who know the secret spots.</p>
+  <div class="hero-badges">
+    <div class="hero-badge"><b>★ 5.0</b> · 200+ Google reviews</div>
+    <div class="hero-badge">100% Private — your group only</div>
+    <div class="hero-badge">English-friendly booking</div>
+  </div>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="#book">Plan My Ocean Day →</a>
+    <a class="btn-ghost" href="#tours">See Tours &amp; Prices</a>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,40 C240,75 480,5 720,30 C960,55 1200,15 1440,45 L1440,70 L0,70 Z" fill="#ffffff"/></svg>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <div class="t-num"><span>★</span> 5.0</div>
+      <div class="t-label">Google Rating</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-num">200+</div>
+      <div class="t-label">5-Star Reviews</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-num">1</div>
+      <div class="t-label">Group per Tour</div>
+    </div>
+    <div class="trust-item">
+      <div class="t-num">8–21</div>
+      <div class="t-label">Open Daily (JST)</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="why">
+  <div class="wrap">
+    <p class="sec-eyebrow">Why SOLKISS</p>
+    <h2 class="sec-title">Not a tour bus. Your own ocean guide.</h2>
+    <p class="sec-lead">Most Blue Cave operators run big mixed groups on a fixed route. We do the opposite — and our reviews show the difference.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="w-icon">🤿</div>
+        <h3>Completely private, every time</h3>
+        <p>Every tour is chartered for your group only — couples, families, friends. No strangers, no waiting in line behind other groups, no rushing.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">🗺️</div>
+        <h3>Spots other shops can't take you</h3>
+        <p>Because we stay small, our experienced guides can read the day's sea conditions and choose from special locations beyond the standard course.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">🔰</div>
+        <h3>First time? Can't swim? Welcome.</h3>
+        <p>We pace everything to you. Nervous beginners, kids, and non-swimmers are guided step by step — at your speed, not the group's.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">📸</div>
+        <h3>Your day, photographed</h3>
+        <p>Your guide captures underwater photos and videos of your group so you can stay in the moment — not fumbling with a rental GoPro.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">🌊</div>
+        <h3>Diving, snorkel, SUP &amp; surf</h3>
+        <p>One shop for your whole ocean day. Mix and match activities and we'll build a plan around your level, schedule, and curiosity.</p>
+      </div>
+      <div class="why-card">
+        <div class="w-icon">💬</div>
+        <h3>Book in English, simply</h3>
+        <p>Message us in English — no translation apps needed. Tell us your dates and who's coming, and we'll reply with a plan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOURS -->
+<section id="tours">
+  <div class="wrap">
+    <p class="sec-eyebrow">Tours &amp; Experiences</p>
+    <h2 class="sec-title">Pick your adventure — or let us design one</h2>
+    <p class="sec-lead">All tours are private to your group and include gear, guiding, and insurance. Not sure which to choose? Just message us — that's what we're here for.</p>
+    <div class="tours-grid">
+
+      <div class="tour-card">
+        <div class="tour-visual tv-cave"><span class="tour-tag hot">Most Popular</span>🌀</div>
+        <div class="tour-body">
+          <h3>Blue Cave Snorkeling</h3>
+          <p class="t-desc">Float into Okinawa's famous glowing blue grotto with your own private guide. Tropical fish, crystal water, and that unreal blue light — no crowds in your photos.</p>
+          <div class="tour-meta">
+            <span>~2 hours</span><span>Age 6+</span><span>No experience needed</span>
+          </div>
+          <div class="tour-price">
+            <span class="p-from">from</span><span class="p-num">¥5,500</span><span class="p-unit">/ person</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-visual tv-dive"><span class="tour-tag">Beginner Friendly</span>🐠</div>
+        <div class="tour-body">
+          <h3>Trial Diving (No License)</h3>
+          <p class="t-desc">Breathe underwater for the first time — safely, slowly, privately. Your instructor stays with your group only, so you set the pace. The Blue Cave by scuba is unforgettable.</p>
+          <div class="tour-meta">
+            <span>~2.5 hours</span><span>Age 10+</span><span>1-on-1 support</span>
+          </div>
+          <div class="tour-price">
+            <span class="p-from">from</span><span class="p-num">¥9,800</span><span class="p-unit">/ person</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-visual tv-fun"><span class="tour-tag">Certified Divers</span>🐢</div>
+        <div class="tour-body">
+          <h3>Fun Diving</h3>
+          <p class="t-desc">Got a license? Skip the cattle-boat experience. We pick sites by the day's conditions and your logbook — reefs, caves, and the marine life Yomitan locals keep to themselves.</p>
+          <div class="tour-meta">
+            <span>Half / full day</span><span>2 dives</span><span>Small group only</span>
+          </div>
+          <div class="tour-price">
+            <span class="p-from">from</span><span class="p-num">¥13,000</span><span class="p-unit">/ 2 dives</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tour-card">
+        <div class="tour-visual tv-sup"><span class="tour-tag">Sunset OK</span>🏄</div>
+        <div class="tour-body">
+          <h3>SUP &amp; Surfing</h3>
+          <p class="t-desc">Glide over turquoise water on a stand-up paddleboard, or catch your first Okinawan wave. Perfect as a relaxed morning before your dive — or a golden-hour finale.</p>
+          <div class="tour-meta">
+            <span>~2 hours</span><span>All levels</span><span>Board included</span>
+          </div>
+          <div class="tour-price">
+            <span class="p-from">from</span><span class="p-num">¥6,500</span><span class="p-unit">/ person</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="price-note">* Sample pricing for demo purposes — final prices, ages and durations to be set by SOLKISS. All tours include guide, equipment, and insurance.</p>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps" id="book">
+  <div class="wrap">
+    <p class="sec-eyebrow">Booking is easy</p>
+    <h2 class="sec-title">Three messages. One unforgettable day.</h2>
+    <p class="sec-lead">No complicated forms, no Japanese required.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Send us a message</h3>
+        <p>LINE, Instagram DM, or phone — in English. Tell us your dates, group size, and what you'd love to do.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>We design your day</h3>
+        <p>We reply with a plan tailored to your level and the sea conditions — including meeting time and what to bring.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Meet us in Yomitan</h3>
+        <p>Show up with swimwear and a towel. We handle everything else — gear, guiding, photos, and the magic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="wrap">
+    <p class="sec-eyebrow">★ 5.0 — 200+ Reviews</p>
+    <h2 class="sec-title">Why every single review is five stars</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Our guide made my nervous wife completely comfortable in the water. Having the whole tour just for our family was worth every yen. The Blue Cave photos he took are incredible."</p>
+        <div class="review-who">— Visitor from Australia</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"I booked using my browser's translate button and it still went perfectly — imagine how easy it'll be now that they have an English page! Best diving experience of our Japan trip."</p>
+        <div class="review-who">— Visitor from the USA</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"No crowds, no rush, no script. They checked the conditions and took us somewhere even better than the Blue Cave that day. This is how ocean tours should be done."</p>
+        <div class="review-who">— Visitor from Singapore</div>
+      </div>
+    </div>
+    <p class="review-note">* Sample testimonials for demo purposes — to be replaced with translated excerpts from SOLKISS's real Google reviews.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <p class="sec-eyebrow">FAQ</p>
+    <h2 class="sec-title">Good questions, honest answers</h2>
+    <div class="faq-list">
+      <details>
+        <summary>I can't swim. Can I still join?</summary>
+        <div class="faq-a">Yes! Snorkeling and trial diving don't require swimming ability. You'll wear a wetsuit (which floats) and your private guide supports you the entire time — at your pace, because there's no one else's pace to follow.</div>
+      </details>
+      <details>
+        <summary>Do you really speak English?</summary>
+        <div class="faq-a">We keep communication simple and clear in English over LINE and Instagram, and our guides use easy English plus hand signals in the water — the universal language of diving. Hundreds of international guests have had a great time with us.</div>
+      </details>
+      <details>
+        <summary>What should I bring?</summary>
+        <div class="faq-a">Just swimwear (worn under your clothes), a towel, and sandals. Wetsuits, masks, fins, and all diving equipment are included. Drinks are on us.</div>
+      </details>
+      <details>
+        <summary>What if the weather is bad?</summary>
+        <div class="faq-a">Safety first, always. If sea conditions aren't right, we'll propose an alternative spot, reschedule, or cancel with no fee. Because we're private, we can often pivot to a sheltered location when big-group tours have to cancel.</div>
+      </details>
+      <details>
+        <summary>Can we combine activities in one day?</summary>
+        <div class="faq-a">Absolutely — that's our specialty. Morning snorkel + afternoon SUP, or trial dive + sunset surf. Tell us your wishlist and we'll build the day around it.</div>
+      </details>
+      <details>
+        <summary>How far in advance should we book?</summary>
+        <div class="faq-a">Since every slot is a private charter, dates fill up fast — especially April to October. Message us as soon as you know your travel dates; same-week requests are sometimes possible, so it never hurts to ask.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="why">
+  <div class="wrap">
+    <p class="sec-eyebrow">Find Us</p>
+    <h2 class="sec-title">In Yomitan — 50 min from Naha Airport</h2>
+    <div class="access-grid">
+      <table class="access-table">
+        <tr><th>Shop</th><td>SOLKISS（ソルキス）</td></tr>
+        <tr><th>Address</th><td>647-6 Owan, Yomitan Village,<br>Nakagami District, Okinawa 904-0313</td></tr>
+        <tr><th>Hours</th><td>8:00 – 21:00</td></tr>
+        <tr><th>Phone</th><td><a href="tel:0989887258" style="color:var(--ocean);font-weight:700;">098-988-7258</a></td></tr>
+        <tr><th>Web</th><td><a href="https://solkiss.net/" target="_blank" rel="noopener" style="color:var(--ocean);font-weight:700;">solkiss.net</a></td></tr>
+        <tr><th>Social</th><td><a href="https://www.instagram.com/solkiss_okinawa/" target="_blank" rel="noopener" style="color:var(--ocean);font-weight:700;">@solkiss_okinawa</a></td></tr>
+      </table>
+      <div class="access-map">
+        <iframe src="https://www.google.com/maps?q=647-6+Owan,+Yomitan,+Nakagami+District,+Okinawa+904-0313&output=embed" loading="lazy" title="SOLKISS location map"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<div class="final-cta">
+  <h2>The Blue Cave is waiting.<br>So is your private guide.</h2>
+  <p>Tell us your travel dates and we'll take care of the rest — in English, with zero stress, and an ocean all to yourselves.</p>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="https://www.instagram.com/solkiss_okinawa/" target="_blank" rel="noopener">Message Us on Instagram →</a>
+    <a class="btn-ghost" href="tel:0989887258">Call 098-988-7258</a>
+  </div>
+</div>
+
+<footer>
+  <div class="f-logo">SOLKISS</div>
+  <p>Private Diving · Snorkeling · SUP · Surfing — Yomitan, Okinawa</p>
+  <p style="margin-top:8px;">647-6 Owan, Yomitan, Okinawa ／ <a href="tel:0989887258">098-988-7258</a> ／ <a href="https://solkiss.net/" target="_blank" rel="noopener">solkiss.net</a></p>
+  <p style="margin-top:16px;opacity:.6;">This page is a design proposal (demo). Prices and details are samples. ※本ページは提案用のデモサイトです。掲載内容はサンプルです。</p>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta">
+  <a class="cta-line" href="https://solkiss.net/" target="_blank" rel="noopener">💬 LINE</a>
+  <a class="cta-dm" href="https://www.instagram.com/solkiss_okinawa/" target="_blank" rel="noopener">📷 DM</a>
+  <a class="cta-tel" href="tel:0989887258">📞 Call</a>
+</div>
+
+</body>
+</html>
