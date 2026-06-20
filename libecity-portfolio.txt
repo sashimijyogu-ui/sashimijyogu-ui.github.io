@@ -1,0 +1,86 @@
+==========================================
+リベシティ プロフィール用 ポートフォリオ（貼り付け用）
+==========================================
+
+──────────────────────────────────
+【A】リンク1行（プロフィール冒頭に貼る用）
+──────────────────────────────────
+
+▼Web制作ポートフォリオ（沖縄フリーランスWebデザイナー）
+https://sashimijyogu-ui.github.io
+
+LP・ホームページ制作の実績をまとめています。無料HP診断も受付中です。
+
+
+──────────────────────────────────
+【B】制作実績リスト（リンクの下に並べる用）
+──────────────────────────────────
+
+■ Web制作実績（LP・ホームページ）
+
+01. SOLKISS — 読谷の貸切マリンショップ（英語LP）
+　　[MARINE / ACTIVITY] 英語対応・インバウンド・予約導線
+　　https://sashimijyogu-ui.github.io/demo/solkiss/
+
+02. LILY'S ICECREAM®︎ — 沖縄発ストリートブランド
+　　[APPAREL BRAND] ブランド・全国展開・POP UP
+　　https://lilys-icecream-demo.pages.dev
+
+03. MINSA HOUSE — ライフスタイルショップ
+　　[LIFESTYLE / SHOP] ナチュラル・EC連携
+　　https://minsahouse-demo.pages.dev
+
+04. SwingMelody — 沖縄市ピアノ教室
+　　[MUSIC SCHOOL] 教室LP・体験申込
+　　https://swingmelody-lp.pages.dev
+
+05. にじいろミュージックスクール — 沖縄音楽教室
+　　[MUSIC SCHOOL] カラフル・多楽器対応
+　　https://njiiro-music-lp.pages.dev
+
+06. かきの花そば — 沖縄そば専門店
+　　[FOOD / RESTAURANT] 飲食店・和モダン
+　　https://kakinohanasoba-lp.pages.dev
+
+07. キャンディーファミリー&キッズ — フォトスタジオ
+　　[PHOTO STUDIO] スタジオ・予約CTA
+　　https://candy-family-kids-demo.pages.dev
+
+08. imua — 嘉手納のトータルビューティー&シェアサロン
+　　[BEAUTY / SHARE SALON] シェアサロン・多業種連携
+　　https://sashimijyogu-ui.github.io/demo/imua/
+
+09. ヒューマンコンディショニング研究所 — 整体・腰痛改善
+　　[HEALTH / WELLNESS] 整体院・予約導線
+　　https://sashimijyogu-ui.github.io/demo/humancdt/
+
+10. PEACH — 沖縄ネイル・マツエク・脱毛
+　　[NAIL / BEAUTY SALON] ネイル・マツエク
+　　https://sashimijyogu-ui.github.io/demo/peach/
+
+11. リラクゼーションルームリフレ — 読谷マッサージ
+　　[RELAXATION / SPA] リラクゼーション
+　　https://sashimijyogu-ui.github.io/demo/refre/
+
+12. LIBRE nailsalon — 沖縄市ネイルサロン
+　　[NAIL SALON] ネイルサロン・フェミニン
+　　https://sashimijyogu-ui.github.io/demo/libre-nailsalon/
+
+13. Café Soleil — スペシャルティコーヒー&フード
+　　[CAFE / FOOD] カフェ・ウォームトーン
+　　https://sashimijyogu-ui.github.io/demo/cafe-soleil/
+
+14. IRON FIT — パーソナルトレーニングジム
+　　[GYM / PERSONAL TRAINING] ジム・インパクト系
+　　https://sashimijyogu-ui.github.io/demo/ironfit/
+
+15. Bloom Esthetic — 大人女性のためのエステサロン
+　　[ESTHETIC / SPA] エステ・ラグジュアリー
+　　https://sashimijyogu-ui.github.io/demo/bloom-esthetic/
+
+
+──────────────────────────────────
+【お問い合わせ】
+──────────────────────────────────
+・Instagram DMで無料HP診断：https://ig.me/m/yoshiko_web_okinawa
+・メール：sashimijyogu@gmail.com
