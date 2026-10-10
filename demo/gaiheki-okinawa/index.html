@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>外壁塗装・屋上防水 LPデモ | 沖縄の塗装店向け</title>
+<meta name="description" content="沖縄の外壁塗装・屋上防水店向けLPのデザインプレビュー。塩害・台風・紫外線に合わせた構成と、写真を送るだけの見積もり導線。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#12324a;
+  --navy-2:#1d4a6b;
+  --sea:#1f9bb4;
+  --sea-soft:#e7f6f9;
+  --sun:#f39a1e;
+  --sun-dark:#de8509;
+  --line-green:#06c755;
+  --paper:#f7f8f6;
+  --card:#fff;
+  --ink:#16232d;
+  --muted:#5d6b75;
+  --border:#dde5e8;
+  --shadow:0 14px 40px rgba(18,50,74,.10);
+  --radius:12px;
+}
+html{scroll-behavior:smooth}
+body{font-family:"Noto Sans JP",sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block;max-width:100%}
+
+/* DEMO RIBBON */
+.demo-ribbon{
+  position:fixed;inset:0 0 auto;z-index:50;height:34px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--sun);color:#fff;font-size:.72rem;font-weight:900;letter-spacing:.06em;
+  padding:0 12px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.demo-ribbon b{background:#fff;color:var(--sun-dark);border-radius:4px;padding:1px 7px;font-size:.66rem}
+
+/* HEADER */
+header{
+  position:fixed;top:34px;left:0;right:0;z-index:40;height:66px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:0 40px;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand-mark{flex:none;width:38px;height:38px;border-radius:9px;background:var(--navy);display:grid;place-items:center}
+.brand-name{min-width:0}
+.brand-name strong{display:block;font-size:1rem;font-weight:900;color:var(--navy);line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand-name span{display:block;font-size:.64rem;color:var(--muted);font-weight:700;letter-spacing:.04em}
+.head-right{display:flex;align-items:center;gap:14px;flex:none}
+.head-tel{text-align:right;line-height:1.3}
+.head-tel small{display:block;font-size:.62rem;color:var(--muted);font-weight:700}
+.head-tel b{font-family:Oswald,sans-serif;font-size:1.35rem;color:var(--navy);letter-spacing:.02em}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;font-weight:900;transition:.2s ease;cursor:pointer;border:0;font-family:inherit}
+.btn-sun{background:var(--sun);color:#fff;box-shadow:0 10px 24px rgba(243,154,30,.32)}
+.btn-sun:hover{background:var(--sun-dark);transform:translateY(-2px)}
+.btn-line{background:var(--line-green);color:#fff;box-shadow:0 10px 24px rgba(6,199,85,.25)}
+.btn-line:hover{transform:translateY(-2px)}
+.btn-sm{padding:10px 20px;font-size:.78rem}
+.btn-lg{padding:17px 30px;font-size:.95rem}
+
+/* HERO */
+.hero{
+  padding:140px 40px 70px;
+  background:
+    radial-gradient(circle at 85% 10%,rgba(243,154,30,.16),transparent 40%),
+    linear-gradient(180deg,#eaf6fa 0%,var(--paper) 100%);
+}
+.hero-inner{max-width:1160px;margin:0 auto;display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.area-pill{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;
+  padding:6px 16px;border-radius:999px;background:#fff;border:1px solid var(--border);
+  color:var(--sea);font-size:.74rem;font-weight:900;letter-spacing:.06em;box-shadow:0 6px 16px rgba(18,50,74,.06);
+}
+.area-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--sea)}
+.hero h1{font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.3;font-weight:900;color:var(--navy);margin-bottom:18px;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--sun-dark);background:linear-gradient(transparent 70%,rgba(243,154,30,.22) 70%)}
+.hero-lead{color:var(--muted);font-weight:500;margin-bottom:26px;max-width:540px}
+.hero-lead strong{color:var(--ink)}
+.trust{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:28px;max-width:540px}
+.trust div{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 10px;text-align:center;box-shadow:0 6px 16px rgba(18,50,74,.05)}
+.trust b{display:block;font-family:Oswald,sans-serif;font-size:1.5rem;color:var(--navy);line-height:1.1}
+.trust span{font-size:.66rem;color:var(--muted);font-weight:700}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:12px;font-size:.72rem;color:var(--muted)}
+
+/* BEFORE / AFTER */
+.ba{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);background:#fff;border:6px solid #fff;aspect-ratio:3/2;user-select:none;touch-action:pan-y}
+.ba-layer{position:absolute;inset:0}
+.ba-layer svg{width:100%;height:100%}
+.ba-after{clip-path:inset(0 0 0 50%)}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);transform:translateX(-50%);pointer-events:none}
+.ba-handle::after{
+  content:"◀ ▶";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;background:#fff;color:var(--navy);
+  display:grid;place-items:center;font-size:.62rem;font-weight:900;box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+.ba-tag{position:absolute;top:12px;padding:3px 12px;border-radius:999px;font-size:.66rem;font-weight:900;letter-spacing:.08em;color:#fff;pointer-events:none}
+.ba-tag.l{left:12px;background:rgba(22,35,45,.72)}
+.ba-tag.r{right:12px;background:var(--sea)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-cap{margin-top:10px;font-size:.72rem;color:var(--muted);text-align:center}
+
+/* SECTIONS */
+section{padding:84px 40px}
+.inner{max-width:1100px;margin:0 auto}
+.label{display:block;font-family:Oswald,sans-serif;color:var(--sea);font-size:.8rem;letter-spacing:.2em;margin-bottom:8px}
+h2{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.4;font-weight:900;color:var(--navy);margin-bottom:14px}
+.sec-lead{color:var(--muted);max-width:640px;margin-bottom:40px}
+.center{text-align:center}
+.center .sec-lead{margin-inline:auto}
+
+/* 3 enemies */
+.enemies{background:#fff}
+.enemy-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.enemy{border:1px solid var(--border);border-radius:var(--radius);padding:28px 24px;background:var(--paper)}
+.enemy-ico{width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-size:1.6rem;margin-bottom:14px}
+.e1 .enemy-ico{background:#e5f3f7}.e2 .enemy-ico{background:#eef0fb}.e3 .enemy-ico{background:#fff1de}
+.enemy h3{font-size:1.1rem;color:var(--navy);margin-bottom:6px}
+.enemy p{font-size:.86rem;color:var(--muted)}
+
+/* self check */
+.check{background:var(--sea-soft)}
+.check-wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start}
+.check-list{background:#fff;border-radius:var(--radius);padding:10px 22px;box-shadow:var(--shadow)}
+.check-list label{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed var(--border);cursor:pointer;font-weight:700;font-size:.92rem}
+.check-list label:last-child{border-bottom:0}
+.check-list input{width:20px;height:20px;margin-top:4px;accent-color:var(--sun);flex:none}
+.check-list small{display:block;font-weight:500;color:var(--muted);font-size:.76rem}
+.result{background:var(--navy);color:#fff;border-radius:var(--radius);padding:28px;position:sticky;top:120px}
+.result .num{font-family:Oswald,sans-serif;font-size:3.4rem;line-height:1;color:var(--sun)}
+.result h3{font-size:1.15rem;margin:10px 0 8px}
+.result p{font-size:.86rem;color:rgba(255,255,255,.78);margin-bottom:20px}
+.meter{height:8px;border-radius:99px;background:rgba(255,255,255,.18);overflow:hidden;margin:14px 0 4px}
+.meter i{display:block;height:100%;width:0;background:var(--sun);transition:width .3s ease}
+
+/* LOCKED PREVIEW */
+.locked{position:relative;background:#fff;overflow:hidden}
+.ghost{filter:blur(6px);opacity:.55;pointer-events:none;user-select:none}
+.ghost-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:28px}
+.ghost-card{height:190px;border-radius:12px;background:linear-gradient(135deg,#d7e7ee,#f2e6d4)}
+.ghost-row{height:16px;border-radius:6px;background:#dfe6ea;margin:12px 0}
+.ghost-row.s{width:60%}
+.ghost-price{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.ghost-price div{height:150px;border-radius:12px;border:2px solid #e3eaee;background:#fafcfc}
+.lock-card{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:min(560px,calc(100% - 32px));background:#fff;border-radius:16px;
+  border:1px solid var(--border);box-shadow:0 24px 60px rgba(18,50,74,.18);
+  padding:34px 30px;text-align:center;
+}
+.lock-ico{width:56px;height:56px;margin:0 auto 14px;border-radius:50%;background:var(--sea-soft);display:grid;place-items:center;font-size:1.5rem}
+.lock-card h3{font-size:1.2rem;color:var(--navy);line-height:1.5;margin-bottom:10px}
+.lock-card p{font-size:.86rem;color:var(--muted);margin-bottom:18px}
+.lock-list{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px}
+.lock-list span{font-size:.72rem;font-weight:800;background:var(--paper);border:1px solid var(--border);border-radius:999px;padding:4px 12px;color:var(--navy-2)}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.7);padding:36px 40px;text-align:center;font-size:.74rem}
+footer a{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
+
+/* MOBILE FIXED CTA */
+.sp-cta{display:none}
+
+.fade{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.fade.show{opacity:1;transform:none}
+
+@media(max-width:900px){
+  header{padding:0 16px;height:60px}
+  .head-tel,.head-right .btn{display:none}
+  .hero{padding:118px 16px 56px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-cta .btn{width:100%}
+  section{padding:64px 16px}
+  .enemy-grid,.check-wrap,.ghost-grid,.ghost-price{grid-template-columns:1fr}
+  .ghost-grid .ghost-card:nth-child(n+2){display:none}
+  .result{position:static}
+  .lock-card{padding:28px 20px}
+  footer{padding:32px 16px 96px}
+  .sp-cta{
+    display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:40;
+    padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);
+    border-top:1px solid var(--border);backdrop-filter:blur(8px);
+  }
+  .sp-cta .btn{padding:13px 8px;font-size:.8rem}
+}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon"><b>DEMO</b><span id="ribbonText">外壁塗装・屋上防水店向け LPデザインプレビュー</span></div>
+
+<header>
+  <a href="#" class="brand">
+    <span class="brand-mark" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 10v9h12v-9" stroke="#f39a1e" stroke-width="2.2" stroke-linejoin="round"/></svg>
+    </span>
+    <span class="brand-name"><strong data-company>サンプル塗装</strong><span>外壁塗装・屋上防水・ひび割れ補修</span></span>
+  </a>
+  <div class="head-right">
+    <div class="head-tel"><small>見積・診断 無料｜8:00〜18:00</small><b data-tel>098-000-0000</b></div>
+    <a href="#check" class="btn btn-sun btn-sm">無料で外壁診断</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="area-pill"><span data-area>沖縄本島</span>の外壁塗装・屋上防水</span>
+      <h1>沖縄の家は、<br><em>潮と台風と日差し</em>で<br>傷んでいく。</h1>
+      <p class="hero-lead">だから、塗り替えは「本土と同じやり方」では足りません。<br><strong data-company>サンプル塗装</strong>は<span data-area>沖縄本島</span>の気候を知る職人が、診断から施工・点検まで直接担当します。</p>
+      <div class="trust">
+        <div><b>0<small style="font-size:.9rem">円</small></b><span>診断・見積もり</span></div>
+        <div><b>自社</b><span>職人が直接施工</span></div>
+        <div><b>写真</b><span>LINEで概算OK</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#check" class="btn btn-sun btn-lg">まずは無料で外壁診断 →</a>
+        <a href="#check" class="btn btn-line btn-lg">LINEで写真を送る</a>
+      </div>
+      <p class="hero-note">※しつこい営業はいたしません。見積もり後のお断りも大丈夫です。</p>
+    </div>
+    <div>
+      <div class="ba" id="ba">
+        <div class="ba-layer" id="baBefore"></div>
+        <div class="ba-layer ba-after" id="baAfter"></div>
+        <div class="ba-handle" id="baHandle"></div>
+        <span class="ba-tag l">BEFORE</span>
+        <span class="ba-tag r">AFTER</span>
+        <input type="range" min="0" max="100" value="50" aria-label="施工前と施工後を比べるスライダー" id="baRange">
+      </div>
+      <p class="ba-cap">← 左右にドラッグして比較｜実際は御社の施工写真が入ります</p>
+    </div>
+  </div>
+</section>
+
+<section class="enemies">
+  <div class="inner center">
+    <span class="label">WHY OKINAWA</span>
+    <h2>沖縄の外壁を傷める、3つの原因</h2>
+    <p class="sec-lead">「まだ大丈夫」と思っていても、沖縄のコンクリート住宅は見えないところから劣化が進みます。</p>
+    <div class="enemy-grid" style="text-align:left">
+      <div class="enemy e1 fade"><div class="enemy-ico">🌊</div><h3>塩害</h3><p>潮風の塩分が鉄筋をサビさせ、コンクリートを内側から押し割ります（爆裂）。海沿いでなくても影響があります。</p></div>
+      <div class="enemy e2 fade"><div class="enemy-ico">🌀</div><h3>台風</h3><p>横殴りの雨が、ひび割れや屋上防水の切れ目から入り込みます。雨漏りの多くは台風シーズンに見つかります。</p></div>
+      <div class="enemy e3 fade"><div class="enemy-ico">☀️</div><h3>紫外線</h3><p>本土より強い日差しで塗膜が早く傷みます。触ると白い粉がつく「チョーキング」は塗り替えのサインです。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="check" id="check">
+  <div class="inner">
+    <span class="label">SELF CHECK</span>
+    <h2>30秒でできる、おうちの劣化チェック</h2>
+    <p class="sec-lead">当てはまるものにチェックしてください。2つ以上なら、一度プロに見てもらうタイミングです。</p>
+    <div class="check-wrap">
+      <div class="check-list" id="checkList">
+        <label><input type="checkbox"><span>外壁を触ると手に白い粉がつく<small>チョーキング：塗膜の防水性が切れてきたサイン</small></span></label>
+        <label><input type="checkbox"><span>髪の毛ほどのひび割れがある<small>ヘアクラック：放っておくと雨水の通り道に</small></span></label>
+        <label><input type="checkbox"><span>コンクリートが欠けて、サビが見えている<small>爆裂：塩害で鉄筋がサビて膨らんでいる状態</small></span></label>
+        <label><input type="checkbox"><span>屋上の防水がふくれている・はがれている<small>雨漏りの手前でよく見られる症状</small></span></label>
+        <label><input type="checkbox"><span>前回の塗装から10年以上たっている<small>沖縄では本土より早めの点検がおすすめ</small></span></label>
+        <label><input type="checkbox"><span>天井や壁にシミがある<small>すでに雨水が入り込んでいる可能性</small></span></label>
+      </div>
+      <div class="result">
+        <span class="label" style="color:#8fd6e4">YOUR RESULT</span>
+        <div class="num"><span id="checkNum">0</span><small style="font-size:1.1rem;color:#fff"> / 6</small></div>
+        <div class="meter"><i id="checkMeter"></i></div>
+        <h3 id="checkTitle">チェックしてみてください</h3>
+        <p id="checkText">当てはまる項目の数で、おすすめの対応が変わります。</p>
+        <a href="#locked" class="btn btn-sun btn-lg" style="width:100%">無料診断を申し込む →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="locked" id="locked">
+  <div class="inner ghost" aria-hidden="true">
+    <span class="label">WORKS</span>
+    <h2>施工事例</h2>
+    <div class="ghost-grid"><div class="ghost-card"></div><div class="ghost-card"></div><div class="ghost-card"></div></div>
+    <div class="ghost-row"></div><div class="ghost-row s"></div>
+    <h2 style="margin-top:40px">料金の目安</h2>
+    <div class="ghost-price"><div></div><div></div><div></div></div>
+    <div class="ghost-row"></div><div class="ghost-row s"></div><div class="ghost-row"></div>
+  </div>
+  <div class="lock-card">
+    <div class="lock-ico">🔒</div>
+    <h3>ここから先は、<br><span data-company>御社</span>様の写真と言葉でつくります</h3>
+    <p>施工事例・料金表・お客様の声・補助金のご案内・よくある質問・お問い合わせフォームまで。<br>テンプレートを当てはめるのではなく、30分ほどお話を伺ってから構成を決めます。</p>
+    <div class="lock-list">
+      <span>施工事例 Before/After</span><span>坪数別の料金目安</span><span>お客様の声</span><span>市町村の補助金案内</span><span>工事の流れ</span><span>よくある質問</span><span>LINE・電話・フォーム</span>
+    </div>
+    <a href="https://sashimijyogu-ui.github.io/#contact" class="btn btn-sun btn-lg">続きの相談をする →</a>
+  </div>
+</section>
+
+<footer>
+  <p>このページはデザインのプレビューです。掲載の電話番号・数値はダミーで、実在の店舗情報ではありません。</p>
+  <p style="margin-top:6px">制作：<a href="https://sashimijyogu-ui.github.io/">沖縄のWeb制作 ポートフォリオ</a></p>
+</footer>
+
+<div class="sp-cta">
+  <a href="#check" class="btn btn-sun">無料で外壁診断</a>
+  <a href="#check" class="btn btn-line">LINEで写真を送る</a>
+</div>
+
+<script>
+(function () {
+  // URLパラメータで宛先ごとに社名・エリアを差し替える（?c=社名&a=エリア&t=電話）
+  var params = new URLSearchParams(location.search);
+  function pick(key, max) {
+    var v = (params.get(key) || "").trim();
+    return v ? v.slice(0, max) : "";
+  }
+  var company = pick("c", 24);
+  var area = pick("a", 16);
+  var tel = pick("t", 16);
+
+  if (company) {
+    document.querySelectorAll("[data-company]").forEach(function (el) { el.textContent = company; });
+    document.getElementById("ribbonText").textContent = company + " 様向け デザインプレビュー（ファーストビューのみ）";
+    document.title = company + " 様向け LPプレビュー";
+  } else {
+    document.querySelectorAll(".lock-card [data-company]").forEach(function (el) { el.textContent = "御社"; });
+  }
+  if (area) document.querySelectorAll("[data-area]").forEach(function (el) { el.textContent = area; });
+  if (tel) document.querySelectorAll("[data-tel]").forEach(function (el) { el.textContent = tel; });
+
+  // Before / After のイラスト（沖縄のRC住宅：陸屋根・花ブロック・給水タンク）
+  function house(after) {
+    var wall = after ? "#f7f3ea" : "#bdb5a6";
+    var parapet = after ? "#ffffff" : "#a99f8e";
+    var roof = after ? "#5aa88f" : "#7d776c";
+    var tank = after ? "#e9eef0" : "#a7a59e";
+    var block = after ? "#e8dcc4" : "#9c917d";
+    var win = after ? "#9fd3e6" : "#7f949b";
+    var sky = after ? ["#bfe9f5", "#eaf8fc"] : ["#c9d3d6", "#e4e8e8"];
+    var id = after ? "a" : "b";
+    var s = '<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">';
+    s += '<defs><linearGradient id="sky' + id + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + sky[0] + '"/><stop offset="1" stop-color="' + sky[1] + '"/></linearGradient></defs>';
+    s += '<rect width="600" height="400" fill="url(#sky' + id + ')"/>';
+    s += '<circle cx="520" cy="70" r="' + (after ? 34 : 30) + '" fill="' + (after ? "#ffcf5a" : "#e9e3cf") + '"/>';
+    s += '<rect y="330" width="600" height="70" fill="' + (after ? "#8cc58a" : "#9aa58f") + '"/>';
+    // 給水タンク
+    s += '<rect x="370" y="88" width="16" height="36" fill="' + parapet + '"/><rect x="414" y="88" width="16" height="36" fill="' + parapet + '"/>';
+    s += '<rect x="356" y="56" width="88" height="40" rx="18" fill="' + tank + '"/>';
+    // 屋上・パラペット
+    s += '<rect x="96" y="118" width="408" height="14" fill="' + roof + '"/>';
+    s += '<rect x="96" y="124" width="408" height="22" fill="' + parapet + '"/>';
+    // 本体
+    s += '<rect x="110" y="146" width="380" height="184" fill="' + wall + '"/>';
+    // 花ブロック
+    for (var i = 0; i < 6; i++) {
+      var x = 128 + i * 26;
+      s += '<rect x="' + x + '" y="166" width="24" height="24" fill="' + block + '"/><circle cx="' + (x + 12) + '" cy="178" r="7" fill="' + wall + '"/>';
+    }
+    // 窓とドア
+    s += '<rect x="312" y="166" width="150" height="70" rx="3" fill="' + win + '"/><line x1="387" y1="166" x2="387" y2="236" stroke="' + wall + '" stroke-width="4"/>';
+    s += '<rect x="140" y="228" width="120" height="58" rx="3" fill="' + win + '"/>';
+    s += '<rect x="330" y="258" width="58" height="72" rx="3" fill="' + (after ? "#3d6f8d" : "#5e6a6c") + '"/>';
+    if (!after) {
+      // 汚れ・ひび・爆裂
+      s += '<path d="M150 146 v30 M200 146 v42 M420 146 v26 M470 146 v36" stroke="#8b8273" stroke-width="7" opacity=".5" stroke-linecap="round"/>';
+      s += '<polyline points="276,150 284,186 276,214 290,252 282,300" fill="none" stroke="#4d463d" stroke-width="2.4"/>';
+      s += '<polyline points="430,248 446,262 440,280 456,300" fill="none" stroke="#4d463d" stroke-width="2"/>';
+      s += '<ellipse cx="226" cy="306" rx="16" ry="10" fill="#8a5a3c"/><line x1="214" y1="306" x2="238" y2="306" stroke="#5a3a26" stroke-width="2"/>';
+      s += '<circle cx="180" cy="126" r="10" fill="#6c665c" opacity=".7"/><circle cx="300" cy="125" r="13" fill="#6c665c" opacity=".6"/>';
+    } else {
+      s += '<rect x="110" y="146" width="380" height="6" fill="#fff" opacity=".7"/>';
+      s += '<path d="M330 172 l40 0 M330 180 l24 0" stroke="#fff" stroke-width="3" opacity=".8"/>';
+    }
+    s += '</svg>';
+    return s;
+  }
+  document.getElementById("baBefore").innerHTML = house(false);
+  document.getElementById("baAfter").innerHTML = house(true);
+
+  var range = document.getElementById("baRange");
+  var after = document.getElementById("baAfter");
+  var handle = document.getElementById("baHandle");
+  function slide() {
+    var v = range.value;
+    after.style.clipPath = "inset(0 0 0 " + v + "%)";
+    handle.style.left = v + "%";
+  }
+  range.addEventListener("input", slide);
+  slide();
+
+  // セルフチェック
+  var boxes = document.querySelectorAll("#checkList input");
+  var copy = [
+    ["チェックしてみてください", "当てはまる項目の数で、おすすめの対応が変わります。"],
+    ["今は様子見でOK", "1年に1回、台風シーズン前に外から見ておくと安心です。"],
+    ["一度、点検のタイミングです", "小さなひびのうちに補修すれば、費用も工期も抑えられます。"],
+    ["早めの診断をおすすめします", "雨水が入り始めている可能性があります。台風前の点検がおすすめです。"]
+  ];
+  function update() {
+    var n = 0;
+    boxes.forEach(function (b) { if (b.checked) n++; });
+    var level = n === 0 ? 0 : n === 1 ? 1 : n <= 3 ? 2 : 3;
+    document.getElementById("checkNum").textContent = n;
+    document.getElementById("checkMeter").style.width = (n / boxes.length * 100) + "%";
+    document.getElementById("checkTitle").textContent = copy[level][0];
+    document.getElementById("checkText").textContent = copy[level][1];
+  }
+  boxes.forEach(function (b) { b.addEventListener("change", update); });
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll(".fade").forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
